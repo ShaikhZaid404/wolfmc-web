@@ -1,0 +1,42 @@
+{
+  "description": "Vote daily for WolfMC across all platforms to earn in-game crate keys, diamonds, and XP boosters. Every vote helps us rank higher and grow the pack!",
+  "rewards": [
+    {
+      "name": "Vote Crate Key",
+      "icon": "Key",
+      "detail": "1x Vote Key per site for rare in-game gear"
+    },
+    {
+      "name": "Bonus Claim Blocks / Money",
+      "icon": "Coins",
+      "detail": "$500 In-Game Currency per verified vote"
+    },
+    {
+      "name": "Streak Boosters",
+      "icon": "Flame",
+      "detail": "Vote 7 days in a row to unlock a Wolf Rank trial"
+    }
+  ],
+  "sites": [
+    {
+      "name": "TopG",
+      "url": "https://topg.org/minecraft-servers/",
+      "frequency": "Every 12 Hours"
+    },
+    {
+      "name": "Minecraft-MP",
+      "url": "https://minecraft-mp.com/",
+      "frequency": "Every 24 Hours"
+    },
+    {
+      "name": "MinecraftServers.org",
+      "url": "https://minecraftservers.org/",
+      "frequency": "Every 24 Hours"
+    },
+    {
+      "name": "Planet Minecraft",
+      "url": "https://www.planetminecraft.com/",
+      "frequency": "Every 24 Hours"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "ign": "WolfOwner",
+    "role": "Owner",
+    "roleColor": "purple",
+    "description": "Founder & Network Lead",
+    "discord": "Owner"
+  },
+  {
+    "ign": "WolfAdmin",
+    "role": "Admin",
+    "roleColor": "red",
+    "description": "Server Operations & Technical Lead",
+    "discord": "Admin"
+  },
+  {
+    "ign": "WolfMod",
+    "role": "Moderator",
+    "roleColor": "blue",
+    "description": "Community & In-Game Moderation",
+    "discord": "Mod"
+  },
+  {
+    "ign": "WolfHelper",
+    "role": "Helper",
+    "roleColor": "emerald",
+    "description": "Player Support & Ticket Assistance",
+    "discord": "Helper"
+  }
+]

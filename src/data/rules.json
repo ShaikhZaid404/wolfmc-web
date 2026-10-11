@@ -1,0 +1,138 @@
+{
+  "lastUpdated": "October 2026",
+  "disclaimer": "By connecting to play.wolfmc.fun or joining our Discord, you agree to adhere to all the rules listed below. Ignorance of rules is not an excuse.",
+  "categories": [
+    {
+      "id": "general-conduct",
+      "title": "General Conduct & Community",
+      "icon": "ShieldAlert",
+      "rules": [
+        {
+          "number": "1.1",
+          "title": "Respectful Behavior",
+          "description": "Harassment, racism, hate speech, toxicity, and excessive toxicity are strictly forbidden across both Minecraft chat and Discord.",
+          "punishment": "Mute (1h - 7d) or Temporary Ban"
+        },
+        {
+          "number": "1.2",
+          "title": "No Spam or Advertising",
+          "description": "Do not spam chat, advertise other Minecraft servers, social media handles without permission, or post phishing links.",
+          "punishment": "Permanent Mute or IP Ban"
+        },
+        {
+          "number": "1.3",
+          "title": "Doxxing & Real-Life Threats",
+          "description": "Sharing personal information (doxxing), IP addresses, or making real-life harm threats will result in an immediate permanent network ban.",
+          "punishment": "Permanent Network & Discord Blacklist"
+        }
+      ]
+    },
+    {
+      "id": "fair-play",
+      "title": "Fair Play & Anti-Cheat",
+      "icon": "Swords",
+      "rules": [
+        {
+          "number": "2.1",
+          "title": "Unfair Advantages & Hack Clients",
+          "description": "Using hacked clients (Killaura, Fly, Speed, Jesus, Reach), illegal mods, X-Ray texture packs, or automated bots (Baritone) is strictly prohibited.",
+          "punishment": "30-Day Ban to Permanent IP Ban"
+        },
+        {
+          "number": "2.2",
+          "title": "Hardware & Autoclickers",
+          "description": "Autoclickers, macros, hardware debouncing adjustments, or software that generates clicks above the CPS limit are not permitted.",
+          "punishment": "7-Day Ban (1st offense), Permanent Ban (Repeated)"
+        },
+        {
+          "number": "2.3",
+          "title": "Bug & Exploit Abuse",
+          "description": "Abusing server dupes, glitches, unpatched game bugs, or bypassing arena barriers must be reported immediately to staff. Exploiting will result in inventory wipes and bans.",
+          "punishment": "Inventory Wipe + 14-Day to Permanent Ban"
+        }
+      ]
+    },
+    {
+      "id": "gamemode-lifesteal",
+      "title": "Lifesteal Rules",
+      "icon": "Heart",
+      "rules": [
+        {
+          "number": "3.1",
+          "title": "Combat Logging",
+          "description": "Disconnecting or intentionally crashing during active combat to avoid heart loss is strictly prevented by CombatTag. Any evasion glitching is punishable.",
+          "punishment": "Automated Death + Heart Forfeiture"
+        },
+        {
+          "number": "3.2",
+          "title": "Heart Farming & Alt Accounts",
+          "description": "Killing alternate accounts or colluding with players repeatedly in designated safe areas to artificially farm hearts is considered boosting.",
+          "punishment": "All Hearts Reset to Default (10) + 7-Day Ban"
+        },
+        {
+          "number": "3.3",
+          "title": "Trap & Portal Trapping",
+          "description": "Creating unescapable death portal traps at public world spawn portals or teleportation spawn points is strictly forbidden.",
+          "punishment": "Trap Removal + 3-Day Ban"
+        }
+      ]
+    },
+    {
+      "id": "gamemode-boxpvp",
+      "title": "BoxPvP Rules",
+      "icon": "Box",
+      "rules": [
+        {
+          "number": "4.1",
+          "title": "Spawn Camping & Safe Zone Glitching",
+          "description": "Attacking players inside safe zones or hitting players through safe-zone boundaries using glitch mechanics is prohibited.",
+          "punishment": "Warning followed by 24h Ban"
+        },
+        {
+          "number": "4.2",
+          "title": "Trading & Item Scams",
+          "description": "Scamming during safe-zone item exchanges or drop-trading is non-refundable. Always use official trade commands or staff-monitored stalls.",
+          "punishment": "Item Confiscation + Temporary Ban"
+        }
+      ]
+    },
+    {
+      "id": "gamemode-practice",
+      "title": "Practice Arena Rules",
+      "icon": "Target",
+      "rules": [
+        {
+          "number": "5.1",
+          "title": "Queue Dodging & Elo Boosting",
+          "description": "Win-trading, intentionally throwing ranked matches to boost friends' Elo ratings, or queue dodging repeatedly is strictly tracked.",
+          "punishment": "Elo Reset + Ranked Queue Blacklist"
+        },
+        {
+          "number": "5.2",
+          "title": "Cross-Teaming in Solo FFA",
+          "description": "Teaming with other players in solo free-for-all practice arenas is prohibited.",
+          "punishment": "Kick or 12h Arena Mute/Ban"
+        }
+      ]
+    },
+    {
+      "id": "appeals",
+      "title": "Ban Appeals & Staff Decisions",
+      "icon": "FileCheck",
+      "rules": [
+        {
+          "number": "6.1",
+          "title": "Staff Discretion",
+          "description": "Server staff reserve the right to mute or ban players if behavior actively harms server stability or player experience, even if not explicitly listed.",
+          "punishment": "Discretionary"
+        },
+        {
+          "number": "6.2",
+          "title": "Official Appeals Process",
+          "description": "To appeal any punishment, open a ticket on our official Discord server at https://discord.gg/PKYFEDhFkb. Arguing with staff in public chat will get appeals denied.",
+          "punishment": "Appeal Denial"
+        }
+      ]
+    }
+  ]
+}
