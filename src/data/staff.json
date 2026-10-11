@@ -18,6 +18,33 @@
     "discord": "Zaid"
   },
   {
+    "name": "MrPcgamer",
+    "ign": "MrPcgamerYML",
+    "role": "Manager",
+    "roleColor": "emerald",
+    "avatar": "/skins/mrpcgamer.png",
+    "description": "Operations & Server Manager",
+    "discord": "MrPcgamer"
+  },
+  {
+    "name": "Shahaan",
+    "ign": "1chai2samosa",
+    "role": "Admin",
+    "roleColor": "rose",
+    "avatar": "/skins/shahaan.png",
+    "description": "Systems & Community Administrator",
+    "discord": "Shahaan"
+  },
+  {
+    "name": "Florian",
+    "ign": "florianb465",
+    "role": "Mod",
+    "roleColor": "amber",
+    "avatar": "/skins/florian.png",
+    "description": "In-Game Moderation & Player Safety",
+    "discord": "Florian"
+  },
+  {
     "name": "Ojas",
     "ign": "ojas__op",
     "role": "Helper",
