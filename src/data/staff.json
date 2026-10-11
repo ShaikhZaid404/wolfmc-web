@@ -16,5 +16,14 @@
     "avatar": "/skins/zaid.png",
     "description": "Co-Owner & Lead Developer",
     "discord": "Zaid"
+  },
+  {
+    "name": "Ojas",
+    "ign": "ojas__op",
+    "role": "Helper",
+    "roleColor": "cyan",
+    "avatar": "/skins/ojas.png",
+    "description": "Community Support & In-Game Helper",
+    "discord": "ojas__op"
   }
 ]

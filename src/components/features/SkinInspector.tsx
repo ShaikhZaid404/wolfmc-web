@@ -18,6 +18,7 @@ export function SkinInspector() {
   const presetStaff = [
     { name: "Golu", ign: "TheGolu", role: "Owner" },
     { name: "Shaikh Zaid", ign: "Zaid1621", role: "Owner" },
+    { name: "Ojas", ign: "ojas__op", role: "Helper" },
   ];
 
   return (
