@@ -1,5 +1,6 @@
 import React from "react";
 import { Hero } from "@/components/sections/Hero";
+import { LiveMotdCard } from "@/components/features/LiveMotdCard";
 import { Features } from "@/components/sections/Features";
 import { Gamemodes } from "@/components/sections/Gamemodes";
 import { Stats } from "@/components/sections/Stats";
@@ -15,6 +16,9 @@ export default function HomePage() {
     <div className="flex flex-col gap-0 w-full">
       {/* 1. Hero Section */}
       <Hero />
+
+      {/* 1.5 Live Server MOTD & Real-Time Status Card */}
+      <LiveMotdCard />
 
       {/* 2. Network Features */}
       <Features />

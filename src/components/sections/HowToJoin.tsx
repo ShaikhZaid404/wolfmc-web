@@ -139,14 +139,22 @@ export function HowToJoin() {
                         platform === "java" ? "Java Address" : "Bedrock Address"
                       )
                     }
-                    className="flex items-center justify-between w-full p-2.5 rounded-xl bg-white/[0.04] hover:bg-purple-600/20 border border-white/[0.08] hover:border-purple-500/30 text-xs font-mono text-neutral-300 transition-all"
+                    className={`flex items-center justify-between w-full p-2.5 rounded-xl text-xs font-mono transition-all duration-300 ${
+                      copied
+                        ? "bg-emerald-500/20 border border-emerald-500/50 text-emerald-300 shadow-md shadow-emerald-950/30"
+                        : "bg-white/[0.04] hover:bg-purple-600/20 border border-white/[0.08] hover:border-purple-500/30 text-neutral-300"
+                    }`}
                   >
                     <span className="truncate">
                       {platform === "java"
                         ? SERVER_CONFIG.ip.java
                         : `${SERVER_CONFIG.ip.bedrock}:${SERVER_CONFIG.ip.bedrockPort}`}
                     </span>
-                    <Copy className="w-3.5 h-3.5 text-purple-400 shrink-0 ml-2" />
+                    {copied ? (
+                      <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0 ml-2 rotate-0 transition-transform" />
+                    ) : (
+                      <Copy className="w-3.5 h-3.5 text-purple-400 shrink-0 ml-2" />
+                    )}
                   </button>
                 </div>
               )}

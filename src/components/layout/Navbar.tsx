@@ -3,15 +3,18 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Copy, Check, Menu, X, ChevronRight } from "lucide-react";
+import { Copy, Check, Menu, X, ChevronRight, Users } from "lucide-react";
 import { DiscordIcon } from "@/components/icons/DiscordIcon";
 import { SERVER_CONFIG } from "@/lib/constants";
 import { useToast } from "@/components/ui/ToastContext";
+import { useServerStatus } from "@/lib/useServerStatus";
 
 export function Navbar() {
   const [copied, setCopied] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [displayMode, setDisplayMode] = useState<"ip" | "players">("ip");
+  const { status } = useServerStatus();
   const { showToast } = useToast();
 
   useEffect(() => {
@@ -20,6 +23,14 @@ export function Navbar() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Smoothly alternate between IP and live Player count every 6 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setDisplayMode((prev) => (prev === "ip" ? "players" : "ip"));
+    }, 6000);
+    return () => clearInterval(timer);
   }, []);
 
   const handleCopyIp = () => {
@@ -70,21 +81,41 @@ export function Navbar() {
 
         {/* Right CTA Actions */}
         <div className="hidden sm:flex items-center gap-3">
-          {/* Server IP Copy Pill */}
+          {/* Smooth Morphing IP & Live Player Count Badge */}
           <button
             onClick={handleCopyIp}
-            className="flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill bg-white/[0.03] hover:bg-white/[0.07] border border-white/[0.08] hover:border-purple-500/30 text-xs text-neutral-300 transition-all group"
+            className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full transition-all duration-500 ease-in-out cursor-pointer group select-none ${
+              copied
+                ? "bg-emerald-500/20 border border-emerald-500/50 text-emerald-300 shadow-lg shadow-emerald-950/40"
+                : "glass-pill bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-purple-500/40 text-neutral-300"
+            }`}
             title="Click to copy server IP"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="font-mono text-[11px] text-neutral-300 group-hover:text-neutral-100">
-              {SERVER_CONFIG.ip.java}
-            </span>
-            {copied ? (
-              <Check className="w-3.5 h-3.5 text-emerald-400" />
-            ) : (
-              <Copy className="w-3.5 h-3.5 text-neutral-500 group-hover:text-neutral-300 transition-colors" />
-            )}
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+
+            {/* Smooth transition container */}
+            <div className="overflow-hidden transition-all duration-500 ease-in-out flex items-center">
+              {displayMode === "ip" ? (
+                <span className="font-mono text-[11px] text-neutral-200 whitespace-nowrap animate-in fade-in duration-300">
+                  {SERVER_CONFIG.ip.java}
+                </span>
+              ) : (
+                <span className="font-mono text-[11px] text-neutral-200 whitespace-nowrap animate-in fade-in duration-300 flex items-center gap-1.5">
+                  <Users className="w-3 h-3 text-purple-400 inline shrink-0" />
+                  <span>
+                    {status.players.online}/{status.players.max} Online
+                  </span>
+                </span>
+              )}
+            </div>
+
+            <div className="shrink-0 transition-transform duration-200">
+              {copied ? (
+                <Check className="w-3.5 h-3.5 text-emerald-400 scale-110" />
+              ) : (
+                <Copy className="w-3.5 h-3.5 text-neutral-500 group-hover:text-purple-300 transition-colors" />
+              )}
+            </div>
           </button>
 
           {/* Discord Icon Only */}
@@ -142,10 +173,15 @@ export function Navbar() {
                 handleCopyIp();
                 setMobileMenuOpen(false);
               }}
-              className="mt-3 flex items-center justify-center gap-2 w-full py-2.5 rounded-xl glass-panel bg-white/[0.05] border border-purple-500/30 text-xs font-semibold text-neutral-200"
+              className="mt-3 flex items-center justify-between w-full py-2.5 px-4 rounded-xl glass-panel bg-white/[0.05] border border-purple-500/30 text-xs font-semibold text-neutral-200"
             >
-              <Copy className="w-3.5 h-3.5 text-purple-400" />
-              <span>Copy IP ({SERVER_CONFIG.ip.java})</span>
+              <span className="flex items-center gap-2">
+                <Copy className="w-3.5 h-3.5 text-purple-400" />
+                <span>{SERVER_CONFIG.ip.java}</span>
+              </span>
+              <span className="font-mono text-neutral-400 text-[11px]">
+                {status.players.online}/{status.players.max} Online
+              </span>
             </button>
           </div>
         </div>

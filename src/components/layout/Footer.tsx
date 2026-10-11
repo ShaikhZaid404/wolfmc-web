@@ -54,9 +54,17 @@ export function Footer() {
             {/* Quick copy pill */}
             <button
               onClick={handleCopy}
-              className="mt-2 flex items-center gap-2.5 px-3.5 py-1.5 rounded-full glass-panel bg-white/[0.02] hover:bg-white/[0.06] border border-white/[0.08] text-xs text-neutral-300 transition-all group"
+              className={`mt-2 flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border text-xs transition-all duration-300 group cursor-pointer ${
+                copied
+                  ? "bg-emerald-500/20 border-emerald-500/50 text-emerald-300 scale-105 shadow-md shadow-emerald-950/30"
+                  : "glass-panel bg-white/[0.02] hover:bg-white/[0.06] border-white/[0.08] text-neutral-300"
+              }`}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span
+                className={`w-1.5 h-1.5 rounded-full ${
+                  copied ? "bg-emerald-400" : "bg-emerald-400 animate-pulse"
+                }`}
+              />
               <span className="font-mono text-[11px] text-neutral-300">
                 {SERVER_CONFIG.ip.java}
               </span>
