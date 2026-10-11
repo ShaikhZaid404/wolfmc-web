@@ -41,7 +41,7 @@ export function useServerStatus() {
 
     async function fetchStatus() {
       try {
-        const res = await fetch("/api/status");
+        const res = await fetch("/api/status", { cache: "no-store" });
         if (res.ok) {
           const data = await res.json();
           if (isMounted) {
@@ -50,13 +50,14 @@ export function useServerStatus() {
           }
         }
       } catch (err) {
-        // keep default status on network error
+        // Keep existing status silently without interrupting UI or showing errors
         if (isMounted) setLoading(false);
       }
     }
 
     fetchStatus();
-    const interval = setInterval(fetchStatus, 30000); // 30s poll
+    // Silent background poll every 5 minutes (300,000ms) with zero UI interruption or timestamps
+    const interval = setInterval(fetchStatus, 5 * 60 * 1000);
 
     return () => {
       isMounted = false;

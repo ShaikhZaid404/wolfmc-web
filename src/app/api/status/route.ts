@@ -1,11 +1,12 @@
 import { NextResponse } from "next";
 
-export const revalidate = 15; // Cache for 15 seconds on Vercel Edge
+export const dynamic = "force-dynamic";
+export const fetchCache = "force-no-store";
 
 export async function GET() {
   try {
     const res = await fetch("https://api.mcstatus.io/v2/status/java/play.wolfmc.fun", {
-      next: { revalidate: 15 },
+      cache: "no-store",
     });
 
     if (!res.ok) {

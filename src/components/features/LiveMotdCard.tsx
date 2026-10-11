@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Server, Users, Copy, Check, Sparkles, RefreshCw, Radio } from "lucide-react";
+import { Server, Users, Copy, Check, Radio } from "lucide-react";
 import { useServerStatus } from "@/lib/useServerStatus";
 import { SERVER_CONFIG } from "@/lib/constants";
 import { useToast } from "@/components/ui/ToastContext";
