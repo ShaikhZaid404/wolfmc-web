@@ -1,0 +1,64 @@
+# WolfMC — Minecraft Java & Bedrock Multiplayer Network
+
+> **Network Name:** WolfMC
+> **Java Server Address:** play.wolfmc.fun (Default Port: 25565)
+> **Bedrock / MCPE Address:** play.wolfmc.fun (Port: 19299)
+> **Minecraft Version:** 1.21.11 (Java & Bedrock Crossplay)
+> **Official Discord:** https://discord.gg/PKYFEDhFkb
+> **Website:** https://wolfmc.fun
+> **Owners & Leadership:** Golu (IGN: TheGolu) & Shaikh Zaid (IGN: Zaid1621)
+
+---
+
+## What is WolfMC?
+WolfMC is a premier high-performance Minecraft crossplay multiplayer network engineered for competitive and survival gameplay. Supporting both Java Edition and Bedrock Edition (MCPE/Console/Windows), WolfMC delivers sub-20ms knockback, robust anti-cheat protection, custom plugins, and zero lag.
+
+---
+
+## Active Gamemodes
+
+### 1. Lifesteal
+- **Overview:** Hardcore heart-stealing SMP where killing a player steals 1 heart permanently. Losing all hearts eliminates the player until revived by clan members.
+- **Key Features:** Revive beacons, custom armor enchants, clans & territory claims, airdrops, and KOTH events.
+
+### 2. BoxPvP
+- **Overview:** Fast-paced arena PvP inside customized mining boxes. Players mine ores, upgrade kits via villager trades, and battle in high-intensity combat pits.
+- **Key Features:** Tiered mines, custom weapon shurikens, safe zone trading, anti-camp spawn protection, and killstreak leaderboards.
+
+### 3. Practice
+- **Overview:** Competitive PvP training arena with ranked and unranked matchmaking queues.
+- **Key Features:** 1v1 duels, FFA colosseum, Elo rating system, kits including Nodebuff, Crystal PvP, Axe/Shield, Gapple, Boxing, and Sumo.
+
+---
+
+## How to Connect to WolfMC
+
+### Java Edition:
+1. Launch Minecraft Java Edition (Version 1.21.11).
+2. Navigate to **Multiplayer** > **Add Server**.
+3. Set Server Address to: `play.wolfmc.fun`.
+4. Click **Done** and connect.
+
+### Bedrock Edition (Mobile / Console / Windows):
+1. Launch Minecraft Bedrock Edition.
+2. Navigate to **Servers** > **Add Server**.
+3. Set Server Name: `WolfMC`.
+4. Set Server Address: `play.wolfmc.fun`.
+5. Set Port: `19299`.
+6. Click **Play** or **Save** to connect.
+
+---
+
+## Canonical Network Links & Routes
+- Homepage & Live Status: https://wolfmc.fun
+- Server Rules & Conduct: https://wolfmc.fun/rules
+- Staff Team & Leadership: https://wolfmc.fun/staff
+- Daily Voting Rewards: https://wolfmc.fun/vote
+- Store & Ranks (Coming Soon): https://wolfmc.fun/store
+- Lifesteal Guide: https://wolfmc.fun/gamemodes/lifesteal
+- BoxPvP Guide: https://wolfmc.fun/gamemodes/boxpvp
+- Practice Guide: https://wolfmc.fun/gamemodes/practice
+- Privacy Policy: https://wolfmc.fun/privacy
+- Terms of Service: https://wolfmc.fun/terms
+- Cookie Policy: https://wolfmc.fun/cookies
+- Discord Community: https://discord.gg/PKYFEDhFkb

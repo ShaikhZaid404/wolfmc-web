@@ -1,0 +1,59 @@
+[
+  {
+    "id": "lifesteal",
+    "title": "Lifesteal",
+    "tagline": "Steal hearts. Build your empire. Survive the lethal hunt.",
+    "color": "red",
+    "accentHex": "#EF4444",
+    "borderClass": "border-red-500/20 hover:border-red-500/50",
+    "bgGlow": "rgba(239, 68, 68, 0.08)",
+    "badge": "Hardcore PvP",
+    "icon": "Heart",
+    "features": [
+      "Custom Heart Stealing mechanics on kill",
+      "Revive Beacon system to bring fallen teammates back",
+      "Custom Talismans & Armor Enchants",
+      "Clans & War Territory claiming",
+      "Hourly Airdrops & KOTH (King of the Hill) events"
+    ],
+    "description": "Every player starts with 10 hearts. Kill another player to steal 1 of their permanent hearts. Lose all your hearts and get eliminated into spectator mode until revived by your clan. Build impenetrable bases, forge deadly alliances, and rule the pack."
+  },
+  {
+    "id": "boxpvp",
+    "title": "BoxPvP",
+    "tagline": "Mine, upgrade, and dominate the fast-paced enclosed battlefield.",
+    "color": "orange",
+    "accentHex": "#F97316",
+    "borderClass": "border-orange-500/20 hover:border-orange-500/50",
+    "bgGlow": "rgba(249, 115, 22, 0.08)",
+    "badge": "Competitive Arena",
+    "icon": "Swords",
+    "features": [
+      "Tiered Mining Mines from Coal to Netherite & Beyond",
+      "Custom BoxPvP Weapons, Shurikens & Special Bows",
+      "Safe Zone instant trading stalls",
+      "Ranked Leaderboards for top killers",
+      "Automated Arena Resets & Anti-Camp protection"
+    ],
+    "description": "A high-octane PvP environment inside customized battle boxes. Farm ores, trade with villagers for overpowered custom god gear, and step right into the combat pit. Fast respawns, instant action, and non-stop adrenaline."
+  },
+  {
+    "id": "practice",
+    "title": "Practice",
+    "tagline": "Refine your combos. Master every kit. Climb the global Elo ranks.",
+    "color": "cyan",
+    "accentHex": "#06B6D4",
+    "borderClass": "border-cyan-500/20 hover:border-cyan-500/50",
+    "bgGlow": "rgba(6, 182, 212, 0.08)",
+    "badge": "Ranked 1v1",
+    "icon": "Target",
+    "features": [
+      "Unranked & Ranked 1v1 matchmaking queues",
+      "Kit selection: Nodebuff, Crystal, Axe, Gapple, Boxing, Sumo",
+      "Free-For-All (FFA) battle colosseum",
+      "Sub-20ms optimized knockback & hit detection",
+      "Match replay system & comprehensive PvP stats"
+    ],
+    "description": "The ultimate battleground to sharpen your combat instincts. Whether you are practicing crystal PvP, perfecting pot-PvP sprint combos, or practicing sword mechanics, WolfMC Practice provides zero-delay, tournament-grade arenas."
+  }
+]

@@ -1,30 +1,18 @@
 [
   {
-    "ign": "WolfOwner",
+    "name": "Golu",
+    "ign": "TheGolu",
     "role": "Owner",
     "roleColor": "purple",
-    "description": "Founder & Network Lead",
-    "discord": "Owner"
+    "description": "Founder & Network Owner",
+    "discord": "Golu"
   },
   {
-    "ign": "WolfAdmin",
-    "role": "Admin",
-    "roleColor": "red",
-    "description": "Server Operations & Technical Lead",
-    "discord": "Admin"
-  },
-  {
-    "ign": "WolfMod",
-    "role": "Moderator",
-    "roleColor": "blue",
-    "description": "Community & In-Game Moderation",
-    "discord": "Mod"
-  },
-  {
-    "ign": "WolfHelper",
-    "role": "Helper",
-    "roleColor": "emerald",
-    "description": "Player Support & Ticket Assistance",
-    "discord": "Helper"
+    "name": "Shaikh Zaid",
+    "ign": "Zaid1621",
+    "role": "Owner",
+    "roleColor": "purple",
+    "description": "Co-Owner & Lead Developer",
+    "discord": "Zaid"
   }
 ]
