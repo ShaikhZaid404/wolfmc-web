@@ -37,15 +37,15 @@ export default function StaffPage() {
             key={staff.ign}
             className="p-8 rounded-3xl glass-card bg-white/[0.02] border border-white/[0.06] hover:border-purple-500/30 flex flex-col sm:flex-row items-center gap-6 relative overflow-hidden"
           >
-            {/* Skin Render */}
-            <div className="relative w-28 h-36 shrink-0 flex items-center justify-center">
+            {/* Custom Avatar Frame */}
+            <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden shrink-0 border border-purple-500/30 group-hover:border-purple-500/60 shadow-xl shadow-purple-950/30 transition-all bg-neutral-900/80">
               <Image
-                src={`https://crafatar.com/renders/body/${staff.ign}?size=144&overlay`}
-                alt={`${staff.name} Skin`}
-                width={112}
-                height={144}
-                className="object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]"
-                unoptimized
+                src={staff.avatar || `https://crafatar.com/renders/body/${staff.ign}?size=144&overlay`}
+                alt={`${staff.name} Avatar`}
+                fill
+                sizes="(max-width: 640px) 96px, 112px"
+                className="object-cover group-hover:scale-105 transition-transform duration-300"
+                priority
               />
             </div>
 

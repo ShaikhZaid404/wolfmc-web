@@ -58,13 +58,19 @@ export function SkinInspector() {
 
       {/* Skin Render Box */}
       <div className="flex flex-col sm:flex-row items-center gap-6 p-6 rounded-2xl glass-panel bg-white/[0.02] border border-white/[0.06]">
-        <div className="relative w-32 h-44 flex items-center justify-center shrink-0">
+        <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex items-center justify-center shrink-0 rounded-2xl overflow-hidden border border-purple-500/30 shadow-xl bg-neutral-900/60">
           <Image
-            src={`https://crafatar.com/renders/body/${currentSkin}?size=160&overlay`}
-            alt={`${currentSkin}'s skin`}
-            width={128}
-            height={160}
-            className="object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)] filter transition-all duration-300"
+            src={
+              currentSkin.toLowerCase() === "thegolu" || currentSkin.toLowerCase() === "golu"
+                ? "/skins/golu.png"
+                : currentSkin.toLowerCase() === "zaid1621" || currentSkin.toLowerCase() === "zaid"
+                ? "/skins/zaid.png"
+                : `https://crafatar.com/renders/body/${currentSkin}?size=160&overlay`
+            }
+            alt={`${currentSkin}'s avatar`}
+            fill
+            sizes="128px"
+            className="object-cover"
             unoptimized
           />
         </div>

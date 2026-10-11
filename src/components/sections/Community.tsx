@@ -21,7 +21,7 @@ export function Community() {
           </div>
 
           <h2 className="font-bebas text-4xl sm:text-5xl tracking-wider text-neutral-100">
-            JOIN OVER 1,200+ PACK WARRIORS
+            JOIN OVER 500+ PACK WARRIORS
           </h2>
 
           <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed font-sans">

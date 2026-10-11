@@ -1,27 +1,27 @@
 "use client";
 
 import React from "react";
-import { Users, UserCheck, MessageSquare, Activity, ShieldCheck } from "lucide-react";
+import { Users, UserCheck, MessageSquare, Activity } from "lucide-react";
 import { DiagnosticDrawer } from "@/components/features/DiagnosticDrawer";
 
 export function Stats() {
   const stats = [
     {
       label: "Active Combatants",
-      value: "142+",
-      sub: "Peak Weekend Capacity",
+      value: "100+",
+      sub: "Daily Online Average",
       icon: Users,
     },
     {
       label: "Total Pack Members",
-      value: "8,500+",
-      sub: "Registered Player Accounts",
+      value: "3.5k+",
+      sub: "Unique Players Joined",
       icon: UserCheck,
     },
     {
       label: "Discord Community",
-      value: "1,200+",
-      sub: "Active Discord Members",
+      value: "500+",
+      sub: "Active Discord Pack",
       icon: MessageSquare,
     },
     {

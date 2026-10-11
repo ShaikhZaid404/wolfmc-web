@@ -4,6 +4,7 @@
     "ign": "TheGolu",
     "role": "Owner",
     "roleColor": "purple",
+    "avatar": "/skins/golu.png",
     "description": "Founder & Network Owner",
     "discord": "Golu"
   },
@@ -12,6 +13,7 @@
     "ign": "Zaid1621",
     "role": "Owner",
     "roleColor": "purple",
+    "avatar": "/skins/zaid.png",
     "description": "Co-Owner & Lead Developer",
     "discord": "Zaid"
   }
