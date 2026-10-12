@@ -1,7 +1,7 @@
 export const SERVER_CONFIG = {
   name: "WolfMC",
   domain: "wolfmc.fun",
-  canonicalUrl: "https://wolfmc.fun",
+  canonicalUrl: "https://www.wolfmc.fun",
   ip: {
     java: "play.wolfmc.fun",
     javaPort: 25565,
