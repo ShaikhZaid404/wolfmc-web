@@ -62,6 +62,14 @@ export function TiltCard({
     <div
       ref={cardRef}
       onClick={onClick}
+      role={onClick ? "button" : undefined}
+      tabIndex={onClick ? 0 : undefined}
+      onKeyDown={(e) => {
+        if (onClick && (e.key === "Enter" || e.key === " ")) {
+          e.preventDefault();
+          onClick();
+        }
+      }}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -72,17 +80,20 @@ export function TiltCard({
           : "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
         transformStyle: "preserve-3d",
       }}
-      className={`relative rounded-3xl overflow-hidden select-none ${className}`}
+      className={`relative rounded-3xl ${onClick ? "cursor-pointer" : ""} ${className}`}
     >
-      {/* 3D Cursor Spotlight Glare */}
-      {isHovered && (
-        <div
-          className="pointer-events-none absolute -inset-px rounded-3xl z-30 transition-opacity duration-300 opacity-100"
-          style={{
-            background: `radial-gradient(350px circle at ${spotlightPos.x}px ${spotlightPos.y}px, ${effectiveGlow}, transparent 70%)`,
-          }}
-        />
-      )}
+      {/* 3D Cursor Spotlight Glare container */}
+      <div className="pointer-events-none absolute inset-0 rounded-3xl overflow-hidden z-20">
+        {isHovered && (
+          <div
+            className="absolute -inset-px rounded-3xl transition-opacity duration-300 opacity-100"
+            style={{
+              background: `radial-gradient(350px circle at ${spotlightPos.x}px ${spotlightPos.y}px, ${effectiveGlow}, transparent 70%)`,
+            }}
+          />
+        )}
+      </div>
+
       {children}
     </div>
   );

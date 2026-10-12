@@ -126,7 +126,7 @@ export function Gamemodes() {
                       : "grid-rows-[0fr] opacity-0 overflow-hidden"
                   }`}
                 >
-                  <div className="overflow-hidden">
+                  <div className="overflow-hidden min-h-0">
                     {/* Full Description */}
                     <p className="text-xs text-neutral-300 leading-relaxed font-sans mb-6">
                       {mode.description}

@@ -25,16 +25,16 @@ export function Hero() {
         </div>
 
         {/* 3D Interactive Centerpiece with Obsidian Crystal */}
-        <div className="relative flex items-center justify-center mb-6">
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-0">
+        <div className="relative w-48 h-48 sm:w-56 sm:h-56 flex items-center justify-center mb-4">
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
             <HeroCrystal3D />
           </div>
-          <div className="relative z-10 w-28 h-28 sm:w-36 sm:h-36 transition-transform duration-300 hover:scale-105 filter drop-shadow-[0_15px_30px_rgba(147,51,234,0.4)]">
+          <div className="relative z-10 w-20 h-20 sm:w-24 sm:h-24 transition-transform duration-300 hover:scale-110 filter drop-shadow-[0_10px_25px_rgba(147,51,234,0.6)]">
             <Image
               src="/wolfmc.png"
               alt="WolfMC 3D Logo"
-              width={144}
-              height={144}
+              width={96}
+              height={96}
               priority
               className="object-contain"
             />

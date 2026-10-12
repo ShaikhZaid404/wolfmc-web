@@ -128,14 +128,11 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="dark">
-      <head>
-        <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable documentation" />
+      <body className="min-h-screen bg-[#050505] text-[#FAFAFA] antialiased selection:bg-purple-600/30 selection:text-white flex flex-col">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-      </head>
-      <body className="min-h-screen bg-[#050505] text-[#FAFAFA] antialiased selection:bg-purple-600/30 selection:text-white flex flex-col">
         <ToastProvider>
           <Navbar />
           <main className="flex-1">{children}</main>

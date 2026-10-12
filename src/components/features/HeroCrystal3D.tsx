@@ -36,6 +36,18 @@ export function HeroCrystal3D() {
 
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
 
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length > 0) {
+        const touch = e.touches[0];
+        const rect = canvas.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+        targetTiltY = ((touch.clientX - cx) / window.innerWidth) * 0.8;
+        targetTiltX = ((touch.clientY - cy) / window.innerHeight) * 0.8;
+      }
+    };
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
+
     // Inner Octahedron Vertices (Obsidian Crystal)
     const baseVertices: [number, number, number][] = [
       [0, 1.25, 0], // Top
@@ -201,6 +213,7 @@ export function HeroCrystal3D() {
     return () => {
       cancelAnimationFrame(animId);
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
     };
   }, []);
 
