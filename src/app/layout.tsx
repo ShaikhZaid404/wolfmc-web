@@ -6,6 +6,7 @@ import { ToastProvider } from "@/components/ui/ToastContext";
 import { CommandPalette } from "@/components/features/CommandPalette";
 import { CookieConsent } from "@/components/layout/CookieConsent";
 import { SERVER_CONFIG } from "@/lib/constants";
+import { Analytics } from "@vercel/analytics/next";
 
 export const viewport: Viewport = {
   themeColor: "#A855F7",
@@ -141,6 +142,7 @@ export default function RootLayout({
           <CommandPalette />
           <CookieConsent />
         </ToastProvider>
+        <Analytics />
       </body>
     </html>
   );
