@@ -140,8 +140,8 @@ export default function RootLayout({
           <CommandPalette />
           <CookieConsent />
         </ToastProvider>
-        <Analytics debug={false} />
-        <SpeedInsights debug={false} />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

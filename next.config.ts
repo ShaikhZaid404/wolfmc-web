@@ -20,11 +20,6 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  poweredByHeader: false,
-  productionBrowserSourceMaps: false,
-  compiler: {
-    removeConsole: process.env.NODE_ENV === "production" ? { exclude: ["error"] } : false,
-  },
 };
 
 export default nextConfig;
