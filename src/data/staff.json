@@ -27,6 +27,15 @@
     "discord": "MrPcgamer"
   },
   {
+    "name": "z",
+    "ign": "Razzi_DD",
+    "role": "Manager",
+    "roleColor": "emerald",
+    "avatar": "/skins/z.png",
+    "description": "Staff Operations & Community Manager",
+    "discord": "z"
+  },
+  {
     "name": "Shahaan",
     "ign": "1chai2samosa",
     "role": "Admin",
@@ -34,6 +43,15 @@
     "avatar": "/skins/shahaan.png",
     "description": "Systems & Community Administrator",
     "discord": "Shahaan"
+  },
+  {
+    "name": "lessert",
+    "ign": "lessertVFX",
+    "role": "Admin",
+    "roleColor": "rose",
+    "avatar": "/skins/lessert.png",
+    "description": "Systems & Server Administrator",
+    "discord": "lessert"
   },
   {
     "name": "Florian",

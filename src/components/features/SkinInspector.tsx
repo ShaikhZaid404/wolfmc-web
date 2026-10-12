@@ -19,7 +19,9 @@ export function SkinInspector() {
     { name: "Golu", ign: "TheGolu", role: "Owner" },
     { name: "Shaikh Zaid", ign: "Zaid1621", role: "Owner" },
     { name: "MrPcgamer", ign: "MrPcgamerYML", role: "Manager" },
+    { name: "z", ign: "Razzi_DD", role: "Manager" },
     { name: "Shahaan", ign: "1chai2samosa", role: "Admin" },
+    { name: "lessert", ign: "lessertVFX", role: "Admin" },
     { name: "Florian", ign: "florianb465", role: "Mod" },
     { name: "Ojas", ign: "ojas__op", role: "Helper" },
   ];

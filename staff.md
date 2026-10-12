@@ -1,18 +1,13 @@
 # staff list 
-1. mrpcganer
-Name: MrPcgamer
-IGN : MrPcgamerYML
-role ;- Manager
-avatar: https://cdn.discordapp.com/avatars/1348686362437619812/fdb2c60c0eb27f27e06eb190cf9c08eb.webp?size=4096
+1. lessert
+Name: lessert
+IGN: lessertVFX
+Role: admin
+avatar: https://cdn.discordapp.com/avatars/1346033140933726208/a_7ca1b65c2ac5f7a7e22fb2a33f74899b.gif?size=4096
+yeh avatar gif hai toh iska koi ek frame anime avatar hai toh ek frame jaha anime ka face shai ho woh uthake laga dema 
 
-2. shahaan
-Name :- shahaan 
-Ign :- 1chai2samosa
-Role :- Admin
-avatar: https://cdn.discordapp.com/avatars/1525363991499767919/2f8d4421646b8704c2f5fe8e6d683c93.webp?size=4096
-
-3. florian
-Name:Florian 
-ign:florianb465
-role:mod
-avatar: https://cdn.discordapp.com/avatars/1082010196462805173/5dc74268e379d84815d6dd912530653e.png?size=1024
+2. z
+Name:- z
+Ign:- Razzi_DD
+Role:- Manager (Staff manager)
+avatar: https://cdn.discordapp.com/avatars/1305013587756060753/a19f9973dd1e55cc2a8c9282917adf61.webp?size=4096

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "Meet the executive administration, managers, and moderation team behind WolfMC Minecraft Network.",
   openGraph: {
     title: "WolfMC Staff Team Roster",
-    description: "Meet the official WolfMC staff team: Owners Golu & Shaikh Zaid, Manager MrPcgamer, Admin Shahaan, Mod Florian, and Helper Ojas.",
+    description: "Meet the official WolfMC staff team: Owners Golu & Shaikh Zaid, Managers MrPcgamer & z, Admins Shahaan & lessert, Mod Florian, and Helper Ojas.",
     url: "/staff",
     siteName: "WolfMC Network",
     images: [
