@@ -1,9 +1,24 @@
 import React from "react";
 import { FileText } from "lucide-react";
 
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Terms of Service",
   description: "WolfMC terms of service and player conduct agreement.",
+  openGraph: {
+    title: "WolfMC Terms of Service",
+    description: "Official gameplay terms, fair-play policies, and store agreements for WolfMC.",
+    url: "/terms",
+    siteName: "WolfMC Network",
+    images: [{ url: "/wolfmc.png", width: 1200, height: 630, alt: "WolfMC Terms of Service" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "WolfMC Terms of Service",
+    description: "Player agreement and service terms for WolfMC.",
+    images: ["/wolfmc.png"],
+  },
 };
 
 export default function TermsPage() {

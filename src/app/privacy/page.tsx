@@ -1,9 +1,24 @@
 import React from "react";
 import { Shield } from "lucide-react";
 
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "WolfMC official privacy policy and data governance.",
+  openGraph: {
+    title: "WolfMC Privacy Policy",
+    description: "Learn how WolfMC protects player privacy and handles telemetry data.",
+    url: "/privacy",
+    siteName: "WolfMC Network",
+    images: [{ url: "/wolfmc.png", width: 1200, height: 630, alt: "WolfMC Privacy Policy" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "WolfMC Privacy Policy",
+    description: "Player data protection and privacy policies for WolfMC.",
+    images: ["/wolfmc.png"],
+  },
 };
 
 export default function PrivacyPage() {

@@ -2,9 +2,31 @@ import React from "react";
 import { Vote, Key, Coins, Flame, ExternalLink, CheckCircle2 } from "lucide-react";
 import voteData from "@/data/vote.json";
 
-export const metadata = {
-  title: "Vote for WolfMC",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Daily Server Voting & Rewards",
   description: "Vote daily for WolfMC across all platforms to claim in-game keys, coins, and rewards.",
+  openGraph: {
+    title: "Vote Daily for WolfMC — Claim Free In-Game Rewards",
+    description: "Support WolfMC by voting daily. Earn free crate keys, in-game coins, and multiplier streaks on play.wolfmc.fun.",
+    url: "/vote",
+    siteName: "WolfMC Network",
+    images: [
+      {
+        url: "/wolfmc.png",
+        width: 1200,
+        height: 630,
+        alt: "Vote for WolfMC",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vote Daily for WolfMC — Claim Free In-Game Rewards",
+    description: "Support WolfMC daily for crate keys and rewards.",
+    images: ["/wolfmc.png"],
+  },
 };
 
 export default function VotePage() {

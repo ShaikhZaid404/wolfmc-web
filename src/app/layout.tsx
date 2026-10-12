@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -6,6 +6,11 @@ import { ToastProvider } from "@/components/ui/ToastContext";
 import { CommandPalette } from "@/components/features/CommandPalette";
 import { CookieConsent } from "@/components/layout/CookieConsent";
 import { SERVER_CONFIG } from "@/lib/constants";
+
+export const viewport: Viewport = {
+  themeColor: "#A855F7",
+  colorScheme: "dark",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(SERVER_CONFIG.canonicalUrl),

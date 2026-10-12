@@ -4,9 +4,31 @@ import { Users, Crown, ShieldCheck, ShieldAlert, Shield, UserCheck, ArrowRight }
 import { SERVER_CONFIG } from "@/lib/constants";
 import staffData from "@/data/staff.json";
 
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Staff Team Roster",
-  description: "Meet the executive leadership and moderation team behind WolfMC Minecraft Network.",
+  description: "Meet the executive administration, managers, and moderation team behind WolfMC Minecraft Network.",
+  openGraph: {
+    title: "WolfMC Staff Team Roster",
+    description: "Meet the official WolfMC staff team: Owners Golu & Shaikh Zaid, Manager MrPcgamer, Admin Shahaan, Mod Florian, and Helper Ojas.",
+    url: "/staff",
+    siteName: "WolfMC Network",
+    images: [
+      {
+        url: "/wolfmc.png",
+        width: 1200,
+        height: 630,
+        alt: "WolfMC Staff Team",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "WolfMC Staff Team Roster",
+    description: "Meet the official administration and moderation team of WolfMC Minecraft Network.",
+    images: ["/wolfmc.png"],
+  },
 };
 
 const roleConfigs: Record<

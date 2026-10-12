@@ -1,9 +1,24 @@
 import React from "react";
 import { Cookie } from "lucide-react";
 
-export const metadata = {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
   title: "Cookie Policy",
   description: "WolfMC cookie policy and local storage disclosure.",
+  openGraph: {
+    title: "WolfMC Cookie Policy",
+    description: "Information regarding essential cookies and local preferences on WolfMC.",
+    url: "/cookies",
+    siteName: "WolfMC Network",
+    images: [{ url: "/wolfmc.png", width: 1200, height: 630, alt: "WolfMC Cookie Policy" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "WolfMC Cookie Policy",
+    description: "Cookie usage and client settings on WolfMC.",
+    images: ["/wolfmc.png"],
+  },
 };
 
 export default function CookiesPage() {

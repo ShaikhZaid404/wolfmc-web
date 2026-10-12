@@ -2,9 +2,31 @@ import React from "react";
 import { ShoppingBag, Sparkles, Crown, Zap, Shield, ArrowRight } from "lucide-react";
 import { SERVER_CONFIG } from "@/lib/constants";
 
-export const metadata = {
-  title: "Official Webstore",
-  description: "WolfMC official store for ranks, cosmetics, and crate keys.",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Official Webstore & Ranks",
+  description: "WolfMC official store for VIP, MVP, and ALPHA WOLF ranks, cosmetics, and crate keys.",
+  openGraph: {
+    title: "WolfMC Official Webstore — Premium Ranks & Perks",
+    description: "Unlock VIP, MVP, and ALPHA WOLF ranks with custom prefixes, extra vaults, and exclusive cosmetic auras on play.wolfmc.fun.",
+    url: "/store",
+    siteName: "WolfMC Network",
+    images: [
+      {
+        url: "/wolfmc.png",
+        width: 1200,
+        height: 630,
+        alt: "WolfMC Official Store",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "WolfMC Official Webstore — Premium Ranks & Perks",
+    description: "Unlock VIP, MVP, and ALPHA WOLF ranks on WolfMC.",
+    images: ["/wolfmc.png"],
+  },
 };
 
 export default function StorePage() {
