@@ -103,3 +103,19 @@ body {
   mask-composite: exclude;
   pointer-events: none;
 }
+
+/* Suppress Vercel Toolbar, Feedback Widgets & INP Delay Popups */
+vercel-live-feedback,
+vercel-toolbar,
+[data-vercel-toolbar],
+[id*="vercel-toolbar"],
+[class*="vercel-toolbar"],
+#__vercel-toolbar,
+#vercel-toolbar {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+}
+
