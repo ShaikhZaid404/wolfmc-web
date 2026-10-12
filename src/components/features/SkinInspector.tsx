@@ -19,11 +19,6 @@ export function SkinInspector() {
     { name: "Golu", ign: "TheGolu", role: "Owner" },
     { name: "Shaikh Zaid", ign: "Zaid1621", role: "Owner" },
     { name: "MrPcgamer", ign: "MrPcgamerYML", role: "Manager" },
-    { name: "z", ign: "Razzi_DD", role: "Manager" },
-    { name: "Shahaan", ign: "1chai2samosa", role: "Admin" },
-    { name: "lessert", ign: "lessertVFX", role: "Admin" },
-    { name: "Florian", ign: "florianb465", role: "Mod" },
-    { name: "Ojas", ign: "ojas__op", role: "Helper" },
   ];
 
   return (
@@ -110,7 +105,7 @@ export function SkinInspector() {
             <p className="text-[10px] uppercase tracking-wider text-neutral-500 mb-1.5 font-sans">
               Quick Presets:
             </p>
-            <div className="flex items-center justify-center sm:justify-start gap-2">
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
               {presetStaff.map((staff) => (
                 <button
                   key={staff.ign}
