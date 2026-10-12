@@ -19,23 +19,18 @@
   ],
   "sites": [
     {
+      "name": "MinecraftServers.org",
+      "url": "https://minecraftservers.org/vote/689673",
+      "frequency": "Every 24 Hours"
+    },
+    {
       "name": "TopG",
-      "url": "https://topg.org/minecraft-servers/",
+      "url": "https://topg.org/minecraft-servers/server-684023",
       "frequency": "Every 12 Hours"
     },
     {
-      "name": "Minecraft-MP",
-      "url": "https://minecraft-mp.com/",
-      "frequency": "Every 24 Hours"
-    },
-    {
-      "name": "MinecraftServers.org",
-      "url": "https://minecraftservers.org/",
-      "frequency": "Every 24 Hours"
-    },
-    {
-      "name": "Planet Minecraft",
-      "url": "https://www.planetminecraft.com/",
+      "name": "Minecraft.Buzz",
+      "url": "https://minecraft.buzz/vote/wolfmc",
       "frequency": "Every 24 Hours"
     }
   ]
