@@ -7,6 +7,7 @@ import { ArrowDown, Swords, Sparkles } from "lucide-react";
 import { DiscordIcon } from "@/components/icons/DiscordIcon";
 import { SERVER_CONFIG } from "@/lib/constants";
 import { BedrockToggle } from "@/components/features/BedrockToggle";
+import { HeroCrystal3D } from "@/components/features/HeroCrystal3D";
 
 export function Hero() {
   return (
@@ -23,16 +24,21 @@ export function Hero() {
           </span>
         </div>
 
-        {/* 3D Wolf Logo */}
-        <div className="relative w-28 h-28 sm:w-36 sm:h-36 mb-6 transition-transform duration-300 hover:scale-105 filter drop-shadow-[0_15px_30px_rgba(147,51,234,0.3)]">
-          <Image
-            src="/wolfmc.png"
-            alt="WolfMC 3D Logo"
-            width={144}
-            height={144}
-            priority
-            className="object-contain"
-          />
+        {/* 3D Interactive Centerpiece with Obsidian Crystal */}
+        <div className="relative flex items-center justify-center mb-6">
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none -z-0">
+            <HeroCrystal3D />
+          </div>
+          <div className="relative z-10 w-28 h-28 sm:w-36 sm:h-36 transition-transform duration-300 hover:scale-105 filter drop-shadow-[0_15px_30px_rgba(147,51,234,0.4)]">
+            <Image
+              src="/wolfmc.png"
+              alt="WolfMC 3D Logo"
+              width={144}
+              height={144}
+              priority
+              className="object-contain"
+            />
+          </div>
         </div>
 
         {/* Main Title (Bebas Neue) */}
