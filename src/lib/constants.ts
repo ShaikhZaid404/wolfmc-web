@@ -10,6 +10,7 @@ export const SERVER_CONFIG = {
   },
   version: "1.21.11",
   discordUrl: "https://discord.gg/PKYFEDhFkb",
+  discordTicketUrl: "https://discord.com/channels/1521811862390571008/1524151497695166526",
   tagline: "Where Legends Are Forged",
   subtagline: "A next-generation Minecraft crossplay network featuring high-stakes Lifesteal, BoxPvP arenas, and competitive ranked Practice.",
   owners: [

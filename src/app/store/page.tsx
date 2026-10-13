@@ -1,15 +1,16 @@
 import React from "react";
-import { ShoppingBag, Sparkles, Crown, Zap, Shield, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { Ticket, Sparkles, Crown, Key, ShieldCheck, ArrowRight, ExternalLink, MessageSquare, CheckCircle2 } from "lucide-react";
 import { SERVER_CONFIG } from "@/lib/constants";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Official Webstore & Ranks",
-  description: "WolfMC official store for VIP, MVP, and ALPHA WOLF ranks, cosmetics, and crate keys.",
+  title: "Official Store & Rank Inquiries",
+  description: "WolfMC official store — For rank upgrades, crate keys, or inquiries, open a support ticket on our official Discord server.",
   openGraph: {
-    title: "WolfMC Official Webstore — Premium Ranks & Perks",
-    description: "Unlock VIP, MVP, and ALPHA WOLF ranks with custom prefixes, extra vaults, and exclusive cosmetic auras on play.wolfmc.fun.",
+    title: "WolfMC Store & Ranks — Discord Ticket Inquiries",
+    description: "Purchase VIP, MVP, Alpha Wolf ranks and Crate Keys via official Discord tickets on play.wolfmc.fun.",
     url: "/store",
     siteName: "WolfMC Network",
     images: [
@@ -17,108 +18,183 @@ export const metadata: Metadata = {
         url: "/wolfmc.png",
         width: 1200,
         height: 630,
-        alt: "WolfMC Official Store",
+        alt: "WolfMC Store & Ranks",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "WolfMC Official Webstore — Premium Ranks & Perks",
-    description: "Unlock VIP, MVP, and ALPHA WOLF ranks on WolfMC.",
+    title: "WolfMC Store & Ranks — Discord Ticket Inquiries",
+    description: "Purchase VIP, MVP, Alpha Wolf ranks and Crate Keys via official Discord tickets on play.wolfmc.fun.",
     images: ["/wolfmc.png"],
   },
 };
 
 export default function StorePage() {
-  const previewRanks = [
+  const steps = [
     {
-      name: "VIP",
-      color: "border-emerald-500/30 text-emerald-400",
-      perks: ["Custom [VIP] Prefix", "/fly in Spawn Hub", "2x Vote Key Multiplier", "Access to /workbench"],
+      num: "01",
+      title: "Join & Open Ticket Channel",
+      desc: "Discord ticket channel link par click karein ya hamare Discord server ke support section me jayein.",
     },
     {
-      name: "MVP",
-      color: "border-cyan-500/30 text-cyan-400",
-      perks: ["Custom [MVP] Prefix", "Priority Server Queue", "4x Extra Vault Rows", "/feed and /heal cooldowns"],
+      num: "02",
+      title: "Create Private Ticket",
+      desc: "Ticket bot button par click karke apni private 1-on-1 support ticket open karein.",
     },
     {
-      name: "ALPHA WOLF",
-      color: "border-purple-500/50 text-purple-400",
-      perks: ["Ultimate [ALPHA] Crown Prefix", "Unrestricted Death Drops in Safezones", "Custom Aura Particles", "Permanent VIP Lounge Access"],
+      num: "03",
+      title: "Get Info & Instant Activation",
+      desc: "Apna Minecraft in-game name aur required rank ya crate key bundle batayein. Staff turant activate karega.",
+    },
+  ];
+
+  const highlights = [
+    {
+      icon: Crown,
+      title: "Server Ranks & Upgrades",
+      desc: "VIP, MVP, aur ALPHA WOLF ranks ke custom prefixes, fly permissions, extra vaults, aur exclusive cosmetic perks.",
+      color: "border-purple-500/30 text-purple-400 bg-purple-500/5",
+    },
+    {
+      icon: Key,
+      title: "Crate Keys & Bundles",
+      desc: "Rare gear, god weapons, aur claim blocks ke crate key bundles jo gameplay ko boost karein.",
+      color: "border-cyan-500/30 text-cyan-400 bg-cyan-500/5",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Direct Owner Assistance",
+      desc: "Golu aur Shaikh Zaid ke saath direct secure communication, UPI/Card payment options, aur 100% verified fulfillment.",
+      color: "border-emerald-500/30 text-emerald-400 bg-emerald-500/5",
     },
   ];
 
   return (
-    <div className="py-28 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+    <div className="py-24 sm:py-28 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
       {/* Header */}
-      <div className="text-center max-w-2xl mx-auto mb-16">
+      <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-pill bg-purple-500/10 border border-purple-500/20 text-purple-400 mb-4">
-          <Sparkles className="w-3.5 h-3.5" />
+          <Ticket className="w-3.5 h-3.5" />
           <span className="text-[11px] font-semibold uppercase tracking-wider font-sans">
-            Store Launching Soon
+            Official Store & Ticket Support
           </span>
         </div>
 
         <h1 className="font-bebas text-5xl sm:text-6xl tracking-wider text-neutral-100">
-          WOLFMC OFFICIAL WEBSTORE
+          WOLFMC RANKS & STORE
         </h1>
 
         <p className="font-sans text-xs sm:text-sm text-neutral-400 mt-2 leading-relaxed">
-          Tebex store integration is currently undergoing testing. All rank purchases directly support dedicated VPS hosting and custom plugin engineering.
+          Agar aapko Ranks ya Crate Keys ke baare me koi bhi information chahiye ya aapko buy karni hai, toh hamare official Discord me ticket banayein!
         </p>
       </div>
 
-      {/* Ranks Preview */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-        {previewRanks.map((rank) => (
-          <div
-            key={rank.name}
-            className={`p-6 rounded-3xl glass-card bg-white/[0.02] border ${rank.color} flex flex-col justify-between`}
+      {/* Main Ticket CTA Box */}
+      <div className="p-8 sm:p-12 rounded-3xl glass-card bg-neutral-950/70 border border-purple-500/30 text-center max-w-3xl mx-auto flex flex-col items-center gap-6 relative overflow-hidden shadow-2xl shadow-purple-950/30 mb-16">
+        {/* Ambient Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-48 bg-purple-600/15 blur-[100px] pointer-events-none" />
+
+        <div className="w-16 h-16 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 shadow-inner">
+          <MessageSquare className="w-8 h-8" />
+        </div>
+
+        <div className="space-y-3 max-w-xl">
+          <h2 className="font-bebas text-3xl sm:text-4xl tracking-wider text-neutral-100">
+            DISCORD TICKET PORTAL
+          </h2>
+          <p className="text-xs sm:text-sm text-neutral-300 font-sans leading-relaxed">
+            Ranks aur Keys ki official pricing, available perks, ya instant purchase ke liye hamara Discord ticket channel visit karein. Hamari team aapse direct 1-on-1 contact karegi.
+          </p>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full sm:w-auto pt-2">
+          <a
+            href={SERVER_CONFIG.discordTicketUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-xs sm:text-sm font-semibold text-white shadow-lg shadow-purple-900/40 transition-all font-sans group"
           >
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <span className="font-bebas text-2xl tracking-wider text-neutral-100">
-                  {rank.name}
-                </span>
-                <Crown className="w-4 h-4 opacity-75" />
-              </div>
+            <Ticket className="w-4 h-4" />
+            <span>Open Discord Ticket Channel</span>
+            <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </a>
 
-              <div className="flex flex-col gap-2 mb-6">
-                {rank.perks.map((perk) => (
-                  <div key={perk} className="flex items-center gap-2 text-xs text-neutral-300 font-sans">
-                    <span className="w-1.5 h-1.5 rounded-full bg-purple-400 shrink-0" />
-                    <span>{perk}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <a
+            href={SERVER_CONFIG.discordUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] text-xs sm:text-sm font-semibold text-neutral-300 hover:text-white transition-all font-sans"
+          >
+            <span>Join Discord Server</span>
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
 
-            <div className="pt-4 border-t border-white/[0.04] text-center">
-              <span className="text-[11px] uppercase tracking-wider font-semibold text-neutral-500 font-sans">
-                Available at Launch
-              </span>
-            </div>
-          </div>
-        ))}
+        <p className="text-[11px] text-neutral-500 font-sans">
+          Direct Channel Link: #tickets in WolfMC Official Discord
+        </p>
       </div>
 
-      {/* Discord Notification Banner */}
-      <div className="p-8 rounded-3xl glass-panel bg-neutral-950/60 border border-white/[0.06] text-center flex flex-col items-center gap-4 max-w-xl mx-auto">
-        <h3 className="font-bebas text-2xl tracking-wider text-neutral-200">
-          BE THE FIRST TO KNOW
-        </h3>
-        <p className="text-xs text-neutral-400 font-sans leading-relaxed">
-          Join our Discord server to get pinged the moment store ranks and early-bird discount codes go live!
-        </p>
-        <a
-          href={SERVER_CONFIG.discordUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-xs font-semibold text-white shadow-md shadow-purple-900/30 transition-all font-sans"
-        >
-          <span>Get Alert on Discord</span>
-          <ArrowRight className="w-3.5 h-3.5" />
-        </a>
+      {/* Highlights Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        {highlights.map((item) => {
+          const Icon = item.icon;
+          return (
+            <div
+              key={item.title}
+              className={`p-6 rounded-3xl glass-card border ${item.color} flex flex-col justify-between`}
+            >
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center mb-4">
+                  <Icon className="w-5 h-5" />
+                </div>
+                <h3 className="font-bebas text-2xl tracking-wider text-neutral-100 mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-neutral-400 font-sans leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* How to Order Steps */}
+      <div className="p-8 sm:p-10 rounded-3xl glass-card bg-white/[0.02] border border-white/[0.06] mb-12">
+        <div className="text-center max-w-lg mx-auto mb-8">
+          <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full glass-pill bg-white/[0.04] border border-white/[0.08] text-neutral-400 text-[10px] uppercase tracking-wider font-semibold mb-2">
+            <Sparkles className="w-3 h-3 text-purple-400" />
+            Simple Process
+          </div>
+          <h3 className="font-bebas text-3xl tracking-wider text-neutral-100">
+            HOW TO GET RANKS & KEYS
+          </h3>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {steps.map((step) => (
+            <div
+              key={step.num}
+              className="p-5 rounded-2xl bg-neutral-900/40 border border-white/[0.04] flex flex-col gap-3"
+            >
+              <div className="flex items-center justify-between">
+                <span className="font-bebas text-2xl text-purple-400 tracking-wider">
+                  STEP {step.num}
+                </span>
+                <CheckCircle2 className="w-4 h-4 text-neutral-600" />
+              </div>
+              <h4 className="font-bebas text-lg tracking-wider text-neutral-200">
+                {step.title}
+              </h4>
+              <p className="text-xs text-neutral-400 font-sans leading-relaxed">
+                {step.desc}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
