@@ -15,7 +15,8 @@ import {
   Swords,
   Heart,
   Target,
-  Zap
+  Zap,
+  Ticket
 } from "lucide-react";
 import { DiscordIcon } from "@/components/icons/DiscordIcon";
 import { SERVER_CONFIG } from "@/lib/constants";
@@ -105,6 +106,17 @@ export function CommandPalette() {
       icon: Vote,
       onSelect: () => {
         router.push("/vote");
+        setIsOpen(false);
+      },
+    },
+    {
+      id: "store",
+      title: "Store & Rank Inquiries",
+      subtitle: "Inquire about VIP, MVP, Alpha Wolf and Crate Keys",
+      category: "Navigation",
+      icon: Ticket,
+      onSelect: () => {
+        router.push("/store");
         setIsOpen(false);
       },
     },
