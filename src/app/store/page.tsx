@@ -34,18 +34,18 @@ export default function StorePage() {
   const steps = [
     {
       num: "01",
-      title: "Join & Open Ticket Channel",
-      desc: "Discord ticket channel link par click karein ya hamare Discord server ke support section me jayein.",
+      title: "Open Ticket Channel",
+      desc: "Click the ticket link below to navigate straight to the #tickets channel on our official Discord server.",
     },
     {
       num: "02",
-      title: "Create Private Ticket",
-      desc: "Ticket bot button par click karke apni private 1-on-1 support ticket open karein.",
+      title: "Create a Private Ticket",
+      desc: "Click the ticket bot button to instantly generate your private 1-on-1 support and inquiry channel.",
     },
     {
       num: "03",
       title: "Get Info & Instant Activation",
-      desc: "Apna Minecraft in-game name aur required rank ya crate key bundle batayein. Staff turant activate karega.",
+      desc: "Share your Minecraft in-game username and the rank or key bundle you want. Staff will handle activation right away.",
     },
   ];
 
@@ -53,19 +53,19 @@ export default function StorePage() {
     {
       icon: Crown,
       title: "Server Ranks & Upgrades",
-      desc: "VIP, MVP, aur ALPHA WOLF ranks ke custom prefixes, fly permissions, extra vaults, aur exclusive cosmetic perks.",
+      desc: "VIP, MVP, and ALPHA WOLF custom prefixes, fly permissions in hub, extra player vaults, and exclusive cosmetic perks.",
       color: "border-purple-500/30 text-purple-400 bg-purple-500/5",
     },
     {
       icon: Key,
       title: "Crate Keys & Bundles",
-      desc: "Rare gear, god weapons, aur claim blocks ke crate key bundles jo gameplay ko boost karein.",
+      desc: "Rare gear, overpowered tools, in-game currency, and claim blocks in crate packages designed to elevate your gameplay.",
       color: "border-cyan-500/30 text-cyan-400 bg-cyan-500/5",
     },
     {
       icon: ShieldCheck,
       title: "Direct Owner Assistance",
-      desc: "Golu aur Shaikh Zaid ke saath direct secure communication, UPI/Card payment options, aur 100% verified fulfillment.",
+      desc: "Direct communication with Server Owners (Golu & Shaikh Zaid), flexible payment methods, and 100% verified fulfillment.",
       color: "border-emerald-500/30 text-emerald-400 bg-emerald-500/5",
     },
   ];
@@ -86,7 +86,7 @@ export default function StorePage() {
         </h1>
 
         <p className="font-sans text-xs sm:text-sm text-neutral-400 mt-2 leading-relaxed">
-          Agar aapko Ranks ya Crate Keys ke baare me koi bhi information chahiye ya aapko buy karni hai, toh hamare official Discord me ticket banayein!
+          If you want to purchase Ranks or Crate Keys, or need any details regarding in-game perks, please create a ticket in our official Discord server!
         </p>
       </div>
 
@@ -104,7 +104,7 @@ export default function StorePage() {
             DISCORD TICKET PORTAL
           </h2>
           <p className="text-xs sm:text-sm text-neutral-300 font-sans leading-relaxed">
-            Ranks aur Keys ki official pricing, available perks, ya instant purchase ke liye hamara Discord ticket channel visit karein. Hamari team aapse direct 1-on-1 contact karegi.
+            For official pricing, rank perks, crate key packages, or instant order fulfillment, visit our Discord ticket channel. Our leadership team provides dedicated 1-on-1 assistance.
           </p>
         </div>
 
@@ -133,7 +133,7 @@ export default function StorePage() {
         </div>
 
         <p className="text-[11px] text-neutral-500 font-sans">
-          Direct Channel Link: #tickets in WolfMC Official Discord
+          Direct Channel: #tickets in WolfMC Official Discord
         </p>
       </div>
 

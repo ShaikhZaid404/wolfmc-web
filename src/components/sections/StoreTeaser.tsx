@@ -24,7 +24,7 @@ export function StoreTeaser() {
         </h2>
 
         <p className="text-xs sm:text-sm text-neutral-400 max-w-lg leading-relaxed font-sans">
-          Agar aapko Ranks ya Crate Keys ke baare me koi bhi info chahiye ya buy karni hai, toh hamare official Discord me ticket banayein!
+          Looking to purchase ranks or crate keys, or have questions about perks? Create a support ticket on our official Discord server!
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3">
