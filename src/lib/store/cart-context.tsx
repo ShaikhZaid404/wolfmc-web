@@ -83,10 +83,10 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const addToCart = (id: string, qty = 1) => {
     if (!STORE_ITEMS[id]) return;
-    setCart((prev) => {
-      const existing = prev.find((item) => item.id === id);
+    setCart((prev: CartLine[]) => {
+      const existing = prev.find((item: CartLine) => item.id === id);
       if (existing) {
-        return prev.map((item) =>
+        return prev.map((item: CartLine) =>
           item.id === id ? { ...item, qty: Math.min(10, item.qty + qty) } : item
         );
       }
@@ -97,7 +97,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   };
 
   const removeFromCart = (id: string) => {
-    setCart((prev) => prev.filter((item) => item.id !== id));
+    setCart((prev: CartLine[]) => prev.filter((item: CartLine) => item.id !== id));
   };
 
   const updateQty = (id: string, qty: number) => {
@@ -105,8 +105,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       removeFromCart(id);
       return;
     }
-    setCart((prev) =>
-      prev.map((item) => (item.id === id ? { ...item, qty: Math.min(10, qty) } : item))
+    setCart((prev: CartLine[]) =>
+      prev.map((item: CartLine) => (item.id === id ? { ...item, qty: Math.min(10, qty) } : item))
     );
   };
 
@@ -114,7 +114,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     setCart([]);
   };
 
-  const itemCount = cart.reduce((acc, line) => acc + line.qty, 0);
+  const itemCount = cart.reduce((acc: number, line: CartLine) => acc + line.qty, 0);
 
   let totalUSD = 0;
   let hasCustom = false;
