@@ -20,6 +20,15 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  async redirects() {
+    return [
+      {
+        source: "/store-boxpvp",
+        destination: "/store/boxpvp",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

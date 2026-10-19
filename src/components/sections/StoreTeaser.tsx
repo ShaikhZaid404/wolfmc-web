@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Ticket, Sparkles, ExternalLink, ArrowRight } from "lucide-react";
+import { Ticket, Sparkles, ExternalLink, ArrowRight, ShoppingBag } from "lucide-react";
 import { SERVER_CONFIG } from "@/lib/constants";
 
 export function StoreTeaser() {
