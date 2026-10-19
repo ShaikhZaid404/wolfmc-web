@@ -9,6 +9,7 @@ import { SERVER_CONFIG } from "@/lib/constants";
 import { useToast } from "@/components/ui/ToastContext";
 import { useServerStatus } from "@/lib/useServerStatus";
 import { useCart } from "@/lib/store/cart-context";
+import { HalloweenBanner } from "@/components/store/HalloweenBanner";
 
 export function Navbar() {
   const [copied, setCopied] = useState(false);
@@ -43,13 +44,17 @@ export function Navbar() {
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled
-          ? "bg-[#050505]/80 backdrop-blur-xl border-b border-white/[0.06] shadow-xl shadow-black/40 py-3.5"
-          : "bg-transparent py-5"
-      }`}
-    >
+    <div className="fixed top-0 left-0 right-0 z-40 flex flex-col pointer-events-none">
+      <div className="pointer-events-auto w-full">
+        <HalloweenBanner />
+      </div>
+      <header
+        className={`pointer-events-auto w-full transition-all duration-300 ${
+          scrolled
+            ? "bg-[#050505]/80 backdrop-blur-xl border-b border-white/[0.06] shadow-xl shadow-black/40 py-3.5"
+            : "bg-transparent py-4"
+        }`}
+      >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo & Name */}
         <Link href="/" className="flex items-center gap-3 group">
@@ -218,5 +223,6 @@ export function Navbar() {
         </div>
       )}
     </header>
+  </div>
   );
 }

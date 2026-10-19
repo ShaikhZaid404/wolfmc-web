@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Swords,
   Sparkles,
@@ -23,7 +24,6 @@ import {
 import { useCart } from "@/lib/store/cart-context";
 import { STORE_ITEMS, COMPARISON_PERKS, StoreItem } from "@/data/store-items";
 import { CurrencySelector } from "@/components/store/CurrencySelector";
-import { HalloweenBanner } from "@/components/store/HalloweenBanner";
 
 export function BoxPvPStoreClient() {
   const { addToCart, formatPrice, cart } = useCart();
@@ -71,11 +71,8 @@ export function BoxPvPStoreClient() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <HalloweenBanner />
-
-      <div className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex-1 w-full">
-        {/* Top Breadcrumb & Currency Bar */}
+    <div className="min-h-screen flex flex-col pt-32 sm:pt-36 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex-1 w-full">
+      {/* Top Breadcrumb & Currency Bar */}
         <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/[0.04]">
           <div className="flex items-center gap-2 text-xs font-mono text-neutral-400">
             <Link href="/" className="hover:text-purple-400 transition-colors">Home</Link>
@@ -176,10 +173,24 @@ export function BoxPvPStoreClient() {
                 >
                   <div>
                     {/* Header */}
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-orange-500/20 text-orange-400 border border-orange-500/30">
-                        {rank.tier}
-                      </span>
+                    <div className="flex items-center justify-between mb-5">
+                      <div className="flex items-center gap-3.5">
+                        {rank.image && (
+                          <div className="relative w-14 h-14 rounded-2xl overflow-hidden bg-neutral-900 border border-orange-500/30 shrink-0 shadow-lg shadow-orange-950/40">
+                            <Image
+                              src={rank.image}
+                              alt={rank.name}
+                              width={56}
+                              height={56}
+                              className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                              loading="lazy"
+                            />
+                          </div>
+                        )}
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-orange-500/20 text-orange-400 border border-orange-500/30">
+                          {rank.tier}
+                        </span>
+                      </div>
                       <Ghost className="w-5 h-5 text-orange-400" />
                     </div>
 
@@ -269,10 +280,24 @@ export function BoxPvPStoreClient() {
                 >
                   <div>
                     {/* Badge & Tier */}
-                    <div className="flex items-center justify-between mb-3">
-                      <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border ${badgeColor}`}>
-                        {rank.badge || rank.tier}
-                      </span>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        {rank.image && (
+                          <div className="relative w-12 h-12 rounded-2xl overflow-hidden bg-neutral-900 border border-white/[0.08] shrink-0 shadow-md">
+                            <Image
+                              src={rank.image}
+                              alt={rank.name}
+                              width={48}
+                              height={48}
+                              className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                              loading="lazy"
+                            />
+                          </div>
+                        )}
+                        <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border ${badgeColor}`}>
+                          {rank.badge || rank.tier}
+                        </span>
+                      </div>
                       {isUltimate ? (
                         <Crown className="w-4 h-4 text-cyan-400" />
                       ) : isPopular ? (
@@ -337,9 +362,22 @@ export function BoxPvPStoreClient() {
           {/* Custom Rank Request Card */}
           <div className="p-7 sm:p-8 rounded-3xl glass-card bg-neutral-950/60 border border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center shrink-0">
-                <Wrench className="w-6 h-6" />
-              </div>
+              {customItem.image ? (
+                <div className="relative w-14 h-14 rounded-2xl overflow-hidden bg-neutral-900 border border-purple-500/20 shrink-0 shadow-md">
+                  <Image
+                    src={customItem.image}
+                    alt={customItem.name}
+                    width={56}
+                    height={56}
+                    className="object-cover w-full h-full"
+                    loading="lazy"
+                  />
+                </div>
+              ) : (
+                <div className="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center shrink-0">
+                  <Wrench className="w-6 h-6" />
+                </div>
+              )}
               <div>
                 <div className="flex items-center gap-2">
                   <h3 className="font-bebas text-2xl tracking-wider text-neutral-100">
@@ -459,15 +497,30 @@ export function BoxPvPStoreClient() {
                   className="p-6 rounded-3xl glass-card bg-neutral-950/70 border border-white/[0.08] hover:border-cyan-500/40 flex flex-col justify-between gap-4 transition-all duration-300"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-4">
-                      <Key className="w-6 h-6" />
+                    <div className="flex items-center justify-between mb-4">
+                      {key.image ? (
+                        <div className="relative w-12 h-12 rounded-2xl overflow-hidden bg-neutral-900 border border-cyan-500/20 shrink-0 shadow-md">
+                          <Image
+                            src={key.image}
+                            alt={key.name}
+                            width={48}
+                            height={48}
+                            className="object-cover w-full h-full"
+                            loading="lazy"
+                          />
+                        </div>
+                      ) : (
+                        <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center">
+                          <Key className="w-6 h-6" />
+                        </div>
+                      )}
+                      <span className="font-mono text-xs text-neutral-500">1x</span>
                     </div>
 
-                    <div className="flex items-baseline justify-between gap-2 mb-2">
+                    <div className="mb-2">
                       <h3 className="font-bebas text-2xl tracking-wider text-neutral-100">
                         {key.name}
                       </h3>
-                      <span className="font-mono text-xs text-neutral-500">1x</span>
                     </div>
 
                     <span className="font-bebas text-2xl tracking-wider text-cyan-400 block mb-2">
@@ -492,6 +545,5 @@ export function BoxPvPStoreClient() {
           </div>
         </section>
       </div>
-    </div>
   );
 }

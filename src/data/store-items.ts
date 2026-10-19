@@ -15,6 +15,7 @@ export interface StoreItem {
   perks?: string[];
   description?: string;
   iconName?: string;
+  image?: string;
 }
 
 export interface CurrencyConfig {
@@ -48,6 +49,7 @@ export const STORE_ITEMS: Record<string, StoreItem> = {
     auctions: 4,
     afk: "1x",
     iconName: "Wolf",
+    image: "/assets/store/ranks/vip.webp",
     perks: [
       "In-game [VIP] prefix",
       "Access to Vip Kit",
@@ -67,6 +69,7 @@ export const STORE_ITEMS: Record<string, StoreItem> = {
     auctions: 6,
     afk: "1x",
     iconName: "PawPrint",
+    image: "/assets/store/ranks/vip-plus.webp",
     perks: [
       "In-game [VIP+] prefix",
       "Access to Vip+ Kit",
@@ -86,6 +89,7 @@ export const STORE_ITEMS: Record<string, StoreItem> = {
     auctions: 9,
     afk: "2x",
     iconName: "Star",
+    image: "/assets/store/ranks/mvp.webp",
     perks: [
       "In-game [MVP] prefix",
       "Access to Mvp Kit",
@@ -108,6 +112,7 @@ export const STORE_ITEMS: Record<string, StoreItem> = {
     auctions: 16,
     afk: "2x",
     iconName: "Sparkles",
+    image: "/assets/store/ranks/mvp-plus.webp",
     perks: [
       "In-game [MVP+] prefix",
       "Access to Mvp+ Kit",
@@ -129,6 +134,7 @@ export const STORE_ITEMS: Record<string, StoreItem> = {
     auctions: 30,
     afk: "3x",
     iconName: "Flame",
+    image: "/assets/store/ranks/wolf.webp",
     perks: [
       "In-game Wolf prefix (no brackets)",
       "Access to Wolf, Mvp+, Mvp, Vip+ & Vip Kits",
@@ -152,6 +158,7 @@ export const STORE_ITEMS: Record<string, StoreItem> = {
     auctions: 50,
     afk: "5x",
     iconName: "Crown",
+    image: "/assets/store/ranks/wolf-plus.webp",
     perks: [
       "In-game Wolf+ prefix (no brackets)",
       "Access to Wolf+, Wolf, Mvp+, Mvp, Vip+ & Vip Kits",
@@ -174,6 +181,7 @@ export const STORE_ITEMS: Record<string, StoreItem> = {
     auctions: 50,
     afk: "5x",
     iconName: "Ghost",
+    image: "/assets/store/halloween/ghost.webp",
     perks: [
       "Duration: only this season",
       "In-game Ghost prefix",
@@ -197,6 +205,7 @@ export const STORE_ITEMS: Record<string, StoreItem> = {
     auctions: 50,
     afk: "5x",
     iconName: "Pumpkin",
+    image: "/assets/store/halloween/pumpkin.webp",
     perks: [
       "Duration: only this season",
       "In-game Pumpkin prefix",
@@ -214,6 +223,7 @@ export const STORE_ITEMS: Record<string, StoreItem> = {
     price: 2.0,
     type: "key",
     iconName: "Key",
+    image: "/assets/store/keys/halloween.webp",
     description: "Exclusive seasonal loot crate with spooky god gear and limited cosmetics.",
   },
   "boxpvp-key-talisman": {
@@ -222,6 +232,7 @@ export const STORE_ITEMS: Record<string, StoreItem> = {
     price: 1.5,
     type: "key",
     iconName: "Key",
+    image: "/assets/store/keys/talisman.webp",
     description: "Unlocks rare talismans that boost strength, defense, and combat speed.",
   },
   "boxpvp-key-daddy": {
@@ -230,6 +241,7 @@ export const STORE_ITEMS: Record<string, StoreItem> = {
     price: 2.0,
     type: "key",
     iconName: "Key",
+    image: "/assets/store/keys/daddy.webp",
     description: "Top-tier custom weapons, god armor sets, and overpowered PvP tools.",
   },
   "boxpvp-key-boxpvp": {
@@ -238,6 +250,7 @@ export const STORE_ITEMS: Record<string, StoreItem> = {
     price: 1.0,
     type: "key",
     iconName: "Key",
+    image: "/assets/store/keys/boxpvp.webp",
     description: "Essential resource bundles, arena tokens, and combat supplies.",
   },
   "boxpvp-custom": {
@@ -246,6 +259,7 @@ export const STORE_ITEMS: Record<string, StoreItem> = {
     price: 0,
     type: "custom",
     iconName: "Wrench",
+    image: "/assets/store/ranks/custom.webp",
     description: "Build your dream custom rank with staff on Discord. Custom quote confirmed in ticket.",
   },
 };

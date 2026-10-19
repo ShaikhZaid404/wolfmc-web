@@ -13,7 +13,7 @@ export function HalloweenBanner() {
   if (!visible || !isHalloweenActive) return null;
 
   return (
-    <div className="w-full bg-gradient-to-r from-orange-950/60 via-purple-950/60 to-orange-950/60 border-b border-orange-500/20 backdrop-blur-md px-4 py-2 text-xs font-sans text-orange-200 flex items-center justify-between gap-3 relative z-30 animate-in fade-in slide-in-from-top duration-300">
+    <div className="w-full bg-gradient-to-r from-orange-950/90 via-purple-950/90 to-orange-950/90 border-b border-orange-500/30 backdrop-blur-md px-4 py-2 text-xs font-sans text-orange-200 flex items-center justify-between gap-3 relative z-50 animate-in fade-in slide-in-from-top duration-300 pointer-events-auto shadow-lg shadow-black/50">
       <div className="max-w-7xl mx-auto flex-1 flex items-center justify-center gap-2 text-center flex-wrap">
         <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-orange-500/20 border border-orange-500/30 text-[10px] font-bold uppercase tracking-wider text-orange-400">
           <Sparkles className="w-3 h-3 animate-spin" />

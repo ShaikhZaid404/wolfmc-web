@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { Swords, Ticket, ShieldCheck, Zap, ArrowRight, ShoppingBag, Sparkles, CheckCircle2 } from "lucide-react";
-import { HalloweenBanner } from "@/components/store/HalloweenBanner";
 import { CurrencySelector } from "@/components/store/CurrencySelector";
 import type { Metadata } from "next";
 
@@ -43,12 +42,8 @@ export default function StoreHubPage() {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* Halloween Seasonal Event Banner */}
-      <HalloweenBanner />
-
-      <div className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto flex-1 w-full">
-        {/* Top Controls: Currency & Breadcrumb */}
+    <div className="min-h-screen flex flex-col pt-32 sm:pt-36 pb-20 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto flex-1 w-full">
+      {/* Top Controls: Currency & Breadcrumb */}
         <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/[0.04]">
           <div className="flex items-center gap-2 text-xs font-mono text-neutral-400">
             <Link href="/" className="hover:text-purple-400 transition-colors">Home</Link>
@@ -140,6 +135,5 @@ export default function StoreHubPage() {
           })}
         </div>
       </div>
-    </div>
   );
 }

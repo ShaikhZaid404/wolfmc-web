@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { X, Trash2, ShoppingBag, ArrowRight, Plus, Minus, Ticket } from "lucide-react";
 import { useCart } from "@/lib/store/cart-context";
 import { STORE_ITEMS } from "@/data/store-items";
@@ -78,6 +79,18 @@ export function CartDrawer() {
                     key={line.id}
                     className="p-4 rounded-2xl glass-card bg-white/[0.02] border border-white/[0.06] flex items-center justify-between gap-3"
                   >
+                    {item.image && (
+                      <div className="relative w-11 h-11 rounded-xl overflow-hidden bg-neutral-900 border border-white/[0.08] shrink-0 shadow-md">
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          width={44}
+                          height={44}
+                          className="object-cover w-full h-full"
+                          loading="lazy"
+                        />
+                      </div>
+                    )}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="font-bebas text-lg tracking-wider text-neutral-100 truncate">
