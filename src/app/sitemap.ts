@@ -34,7 +34,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/store`,
       lastModified: now,
       changeFrequency: "weekly",
-      priority: 0.8,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/store/boxpvp`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/llms.txt`,

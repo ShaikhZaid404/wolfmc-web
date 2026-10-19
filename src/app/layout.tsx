@@ -8,6 +8,9 @@ import { CookieConsent } from "@/components/layout/CookieConsent";
 import { SERVER_CONFIG } from "@/lib/constants";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { CartProvider } from "@/lib/store/cart-context";
+import { CartDrawer } from "@/components/store/CartDrawer";
+import { CheckoutModal } from "@/components/store/CheckoutModal";
 
 export const viewport: Viewport = {
   themeColor: "#A855F7",
@@ -134,11 +137,15 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <ToastProvider>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-          <CommandPalette />
-          <CookieConsent />
+          <CartProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <CartDrawer />
+            <CheckoutModal />
+            <CommandPalette />
+            <CookieConsent />
+          </CartProvider>
         </ToastProvider>
         <Analytics />
         <SpeedInsights />

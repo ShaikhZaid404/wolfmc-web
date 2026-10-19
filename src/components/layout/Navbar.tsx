@@ -3,11 +3,12 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Copy, Check, Menu, X, ChevronRight, Users } from "lucide-react";
+import { Copy, Check, Menu, X, ChevronRight, Users, ShoppingBag } from "lucide-react";
 import { DiscordIcon } from "@/components/icons/DiscordIcon";
 import { SERVER_CONFIG } from "@/lib/constants";
 import { useToast } from "@/components/ui/ToastContext";
 import { useServerStatus } from "@/lib/useServerStatus";
+import { useCart } from "@/lib/store/cart-context";
 
 export function Navbar() {
   const [copied, setCopied] = useState(false);
@@ -16,6 +17,7 @@ export function Navbar() {
   const [displayMode, setDisplayMode] = useState<"ip" | "players">("ip");
   const { status } = useServerStatus();
   const { showToast } = useToast();
+  const { itemCount, setIsCartOpen } = useCart();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -118,12 +120,27 @@ export function Navbar() {
             </div>
           </button>
 
+          {/* Cart Drawer Trigger */}
+          <button
+            onClick={() => setIsCartOpen(true)}
+            className="relative p-2 rounded-full glass-pill bg-white/[0.03] hover:bg-purple-600/20 border border-white/[0.08] hover:border-purple-500/40 text-neutral-400 hover:text-purple-300 transition-all cursor-pointer"
+            aria-label="View Order Cart"
+            title="View Order Cart"
+          >
+            <ShoppingBag className="w-4 h-4" />
+            {itemCount > 0 && (
+              <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-purple-600 text-[10px] font-bold text-white flex items-center justify-center shadow-md animate-in zoom-in">
+                {itemCount}
+              </span>
+            )}
+          </button>
+
           {/* Discord Icon Only */}
           <a
             href={SERVER_CONFIG.discordUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-full glass-pill bg-white/[0.03] hover:bg-[#5865F2]/20 border border-white/[0.08] hover:border-[#5865F2]/40 text-neutral-400 hover:text-[#5865F2] transition-all"
+            className="p-2 rounded-full glass-pill bg-white/[0.03] hover:bg-[#5865F2]/20 border border-white/[0.08] hover:border-purple-500/40 text-neutral-400 hover:text-[#5865F2] transition-all"
             aria-label="Join Official Discord"
             title="Join Official Discord"
           >
@@ -131,8 +148,22 @@ export function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Hamburger Button */}
+        {/* Mobile Actions */}
         <div className="flex sm:hidden items-center gap-2">
+          {/* Mobile Cart Button */}
+          <button
+            onClick={() => setIsCartOpen(true)}
+            className="relative p-2 rounded-full glass-pill bg-white/[0.03] text-neutral-400 hover:text-purple-300 cursor-pointer"
+            aria-label="View Order Cart"
+          >
+            <ShoppingBag className="w-4 h-4" />
+            {itemCount > 0 && (
+              <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-purple-600 text-[9px] font-bold text-white flex items-center justify-center shadow-md animate-in zoom-in">
+                {itemCount}
+              </span>
+            )}
+          </button>
+
           <a
             href={SERVER_CONFIG.discordUrl}
             target="_blank"

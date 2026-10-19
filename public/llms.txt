@@ -53,8 +53,8 @@ WolfMC is a premier high-performance Minecraft crossplay multiplayer network eng
 - Homepage & Live Status: https://wolfmc.fun
 - Server Rules & Conduct: https://wolfmc.fun/rules
 - Staff Team & Leadership: https://wolfmc.fun/staff
-- Daily Voting Rewards: https://wolfmc.fun/vote
-- Store & Rank Inquiries (Discord Tickets): https://wolfmc.fun/store
+- Store Hub: https://wolfmc.fun/store
+- BoxPvP Webstore: https://wolfmc.fun/store/boxpvp
 - Lifesteal Guide: https://wolfmc.fun/gamemodes/lifesteal
 - BoxPvP Guide: https://wolfmc.fun/gamemodes/boxpvp
 - Practice Guide: https://wolfmc.fun/gamemodes/practice

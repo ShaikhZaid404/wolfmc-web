@@ -28,24 +28,25 @@ export function StoreTeaser() {
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-3">
+          <Link
+            href="/store"
+            className="flex items-center gap-2 px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-xs font-semibold text-white shadow-md shadow-purple-900/30 transition-all font-sans group"
+          >
+            <ShoppingBag className="w-4 h-4" />
+            <span>Browse Official Store</span>
+            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+          </Link>
+
           <a
             href={SERVER_CONFIG.discordTicketUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-xs font-semibold text-white shadow-md shadow-purple-900/30 transition-all font-sans group"
+            className="flex items-center gap-2 px-5 py-3 rounded-xl bg-white/[0.05] hover:bg-white/[0.08] border border-white/[0.08] text-xs font-semibold text-neutral-200 hover:text-white transition-all font-sans"
           >
-            <Ticket className="w-4 h-4" />
-            <span>Create Discord Ticket</span>
-            <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            <Ticket className="w-4 h-4 text-purple-400" />
+            <span>Discord Support</span>
+            <ExternalLink className="w-3.5 h-3.5 text-neutral-400" />
           </a>
-
-          <Link
-            href="/store"
-            className="flex items-center gap-2 px-5 py-3 rounded-xl bg-white/[0.05] hover:bg-white/[0.08] border border-white/[0.08] text-xs font-semibold text-neutral-200 transition-all font-sans"
-          >
-            <span>Store Info</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </Link>
         </div>
       </div>
     </section>

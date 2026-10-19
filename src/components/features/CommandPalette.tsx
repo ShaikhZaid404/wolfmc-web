@@ -111,12 +111,23 @@ export function CommandPalette() {
     },
     {
       id: "store",
-      title: "Store & Rank Inquiries",
-      subtitle: "Inquire about VIP, MVP, Alpha Wolf and Crate Keys",
+      title: "Store: Official Webstore",
+      subtitle: "Browse ranks, crates, and gamemode packages",
       category: "Navigation",
       icon: Ticket,
       onSelect: () => {
         router.push("/store");
+        setIsOpen(false);
+      },
+    },
+    {
+      id: "boxpvp-store",
+      title: "Store: BoxPvP Store",
+      subtitle: "BoxPvP ranks, Halloween limited editions & crate keys",
+      category: "Store",
+      icon: Swords,
+      onSelect: () => {
+        router.push("/store/boxpvp");
         setIsOpen(false);
       },
     },

@@ -1,0 +1,33 @@
+# WOLFMC OFFICIAL WEB PORTAL IS NOW LIVE!
+
+@everyone
+
+> **The next chapter of WolfMC has officially begun.**
+> We are thrilled to unveil our brand-new, ultra-fast official web portal designed from the ground up for our pack.
+
+Explore the website right now:
+### **https://wolfmc.fun**
+
+---
+
+### **What's New on the Web Portal?**
+
+* **Live Server Telemetry** — Real-time server MOTD, player counts, and latency diagnostics.
+* **3D Gamemode Breakdown** — In-depth mechanics for **Lifesteal SMP**, **BoxPvP**, and **Ranked Practice**.
+* **Interactive Player Lab** — Test your clicking speed with our **CPS Tester**, calculate **Lifesteal Hearts**, and inspect **3D Player Skins**.
+* **Daily Voting Rewards** — Claim daily in-game crate keys and currency boosters across verified portals.
+* **Staff Roster & Network Rules** — Transparent administration team and complete community guidelines.
+* **Discord Ticket Store** — Need ranks (`VIP`, `MVP`, `ALPHA WOLF`) or key bundles? Directly open an inquiry ticket with leadership.
+
+---
+
+### **Server Connection Details**
+```yaml
+Java Edition:    play.wolfmc.fun (1.21.11)
+Bedrock Edition: play.wolfmc.fun (Port: 19299)
+Official Portal: https://wolfmc.fun
+```
+
+Jump in, test out the interactive lab, and let us know your feedback in the chat!
+
+*— The WolfMC Leadership Team*
