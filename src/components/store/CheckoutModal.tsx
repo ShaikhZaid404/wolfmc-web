@@ -104,12 +104,9 @@ export function CheckoutModal() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
       <div
-        className="w-full max-w-lg rounded-3xl glass-card bg-neutral-950 border border-white/[0.1] shadow-2xl p-6 sm:p-8 relative overflow-hidden"
+        className="w-full max-w-lg rounded-3xl glass-card bg-[#0d0d12] border border-white/[0.08] shadow-2xl p-6 sm:p-8 relative overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Glow */}
-        <div className="absolute top-0 right-0 w-64 h-32 bg-purple-600/15 blur-[80px] pointer-events-none" />
-
         {/* Close Button */}
         <button
           onClick={handleClose}
@@ -141,7 +138,7 @@ export function CheckoutModal() {
                 <span className="text-[10px] uppercase font-bold tracking-wider text-neutral-500 font-sans block">
                   Your Order ID
                 </span>
-                <span className="font-mono text-lg font-bold text-purple-400 tracking-wider">
+                <span className="font-mono text-lg font-bold text-[#c084fc] tracking-wider">
                   {orderSuccess}
                 </span>
               </div>
@@ -169,7 +166,7 @@ export function CheckoutModal() {
                 href={discordTicketLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-xs uppercase tracking-wider shadow-lg shadow-purple-900/40 transition-all font-sans group"
+                className="flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-[#9333ea] hover:bg-[#8b24e0] text-white font-semibold text-xs uppercase tracking-wider border border-[#c084fc]/40 transition-all font-sans group"
               >
                 <Ticket className="w-4 h-4" />
                 <span>Open Discord Ticket</span>
@@ -188,7 +185,7 @@ export function CheckoutModal() {
           /* Checkout Form */
           <div>
             <div className="mb-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-pill bg-purple-500/10 border border-purple-500/20 text-purple-400 text-[10px] font-semibold uppercase tracking-wider mb-2">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-pill bg-[#c084fc]/10 border border-[#c084fc]/25 text-[#c084fc] text-[10px] font-semibold uppercase tracking-wider mb-2">
                 <Ticket className="w-3.5 h-3.5" />
                 Discord Delivery
               </div>
@@ -218,7 +215,7 @@ export function CheckoutModal() {
                   placeholder="e.g. Zaid1621"
                   value={ign}
                   onChange={(e) => setIgn(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/[0.08] focus:border-purple-500/50 text-neutral-100 placeholder-neutral-500 text-xs font-mono focus:outline-none transition-colors"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/[0.08] focus:border-[#c084fc]/60 text-neutral-100 placeholder-neutral-500 text-xs font-mono focus:outline-none transition-colors"
                 />
                 <span className="text-[10px] text-neutral-500 mt-1 block">
                   3 to 16 characters, letters, numbers, and underscores only.
@@ -235,7 +232,7 @@ export function CheckoutModal() {
                   placeholder="e.g. zaid or zaid#0000"
                   value={discord}
                   onChange={(e) => setDiscord(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/[0.08] focus:border-purple-500/50 text-neutral-100 placeholder-neutral-500 text-xs focus:outline-none transition-colors"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/[0.08] focus:border-[#c084fc]/60 text-neutral-100 placeholder-neutral-500 text-xs focus:outline-none transition-colors"
                 />
               </div>
 
@@ -249,7 +246,7 @@ export function CheckoutModal() {
                   placeholder="Any special requests or instructions..."
                   value={note}
                   onChange={(e) => setNote(e.target.value)}
-                  className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/[0.08] focus:border-purple-500/50 text-neutral-100 placeholder-neutral-500 text-xs focus:outline-none transition-colors resize-none"
+                  className="w-full px-4 py-2.5 rounded-xl bg-white/[0.03] border border-white/[0.08] focus:border-[#c084fc]/60 text-neutral-100 placeholder-neutral-500 text-xs focus:outline-none transition-colors resize-none"
                 />
               </div>
 
@@ -258,7 +255,7 @@ export function CheckoutModal() {
                 <span className="text-neutral-400">
                   {cart.reduce((acc, l) => acc + l.qty, 0)} items in cart
                 </span>
-                <span className="font-mono font-bold text-purple-400">
+                <span className="font-mono font-bold text-[#c084fc]">
                   Total: {formatPrice(totalUSD)}
                   {hasCustom && " + Custom"}
                 </span>
@@ -267,7 +264,7 @@ export function CheckoutModal() {
               <button
                 type="submit"
                 disabled={loading}
-                className="mt-2 w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-purple-600 hover:bg-purple-500 disabled:opacity-50 text-white font-semibold text-xs uppercase tracking-wider shadow-lg shadow-purple-900/40 transition-all font-sans cursor-pointer"
+                className="mt-2 w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-[#9333ea] hover:bg-[#8b24e0] disabled:opacity-50 text-white font-semibold text-xs uppercase tracking-wider border border-[#c084fc]/40 transition-all font-sans cursor-pointer"
               >
                 {loading ? (
                   <>

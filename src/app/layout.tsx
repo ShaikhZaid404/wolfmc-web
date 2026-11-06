@@ -131,7 +131,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="dark">
-      <body className="min-h-screen bg-[#050505] text-[#FAFAFA] antialiased selection:bg-purple-600/30 selection:text-white flex flex-col">
+      <body className="min-h-screen bg-[#08080a] text-[#FAFAFA] antialiased selection:bg-[#c084fc]/30 selection:text-white flex flex-col">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

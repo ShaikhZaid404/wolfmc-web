@@ -44,21 +44,21 @@ export function Features() {
         <h2 className="font-bebas text-4xl sm:text-5xl tracking-wider text-neutral-100">
           WHY CHOOSE WOLFMC
         </h2>
-        <p className="font-playfair italic text-sm sm:text-base text-neutral-400 mt-1">
+        <p className="font-playfair italic text-sm sm:text-base text-[#d8b4fe] mt-1">
           &ldquo;Engineered for competitive superiority and fair play.&rdquo;
         </p>
       </div>
 
-      {/* 3x2 Grid of Frosted Glass Cards */}
+      {/* 3x2 Grid of Minimalist Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature) => {
           const Icon = feature.icon;
           return (
             <div
               key={feature.title}
-              className="p-8 rounded-2xl glass-card bg-white/[0.02] border border-white/[0.06] hover:border-purple-500/30 flex flex-col items-start gap-4"
+              className="p-8 rounded-2xl glass-card flex flex-col items-start gap-4"
             >
-              <div className="p-2.5 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20">
+              <div className="p-2.5 rounded-xl bg-[#c084fc]/10 text-[#c084fc] border border-[#c084fc]/25">
                 <Icon className="w-5 h-5" />
               </div>
 

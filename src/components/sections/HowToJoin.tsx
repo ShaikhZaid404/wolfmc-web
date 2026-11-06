@@ -68,17 +68,17 @@ export function HowToJoin() {
         <h2 className="font-bebas text-4xl sm:text-5xl tracking-wider text-neutral-100">
           HOW TO CONNECT
         </h2>
-        <p className="font-playfair italic text-sm sm:text-base text-neutral-400 mt-1">
+        <p className="font-playfair italic text-sm sm:text-base text-[#d8b4fe] mt-1">
           &ldquo;Simple 3-step setup. Instant access to the pack.&rdquo;
         </p>
 
         {/* Platform Selector */}
-        <div className="inline-flex items-center p-1 rounded-full glass-panel bg-white/[0.03] border border-white/[0.08] mt-6">
+        <div className="inline-flex items-center p-1 rounded-full glass-panel mt-6">
           <button
             onClick={() => setPlatform("java")}
             className={`flex items-center gap-2 px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all font-sans ${
               platform === "java"
-                ? "bg-purple-600 text-white shadow-lg shadow-purple-900/40"
+                ? "bg-[#9333ea] text-white border border-[#c084fc]/40 shadow-md shadow-[#9333ea]/20"
                 : "text-neutral-400 hover:text-neutral-200"
             }`}
           >
@@ -90,7 +90,7 @@ export function HowToJoin() {
             onClick={() => setPlatform("bedrock")}
             className={`flex items-center gap-2 px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all font-sans ${
               platform === "bedrock"
-                ? "bg-purple-600 text-white shadow-lg shadow-purple-900/40"
+                ? "bg-[#9333ea] text-white border border-[#c084fc]/40 shadow-md shadow-[#9333ea]/20"
                 : "text-neutral-400 hover:text-neutral-200"
             }`}
           >
@@ -107,14 +107,14 @@ export function HowToJoin() {
           return (
             <div
               key={item.step}
-              className="p-8 rounded-3xl glass-card bg-white/[0.02] border border-white/[0.06] hover:border-purple-500/30 flex flex-col justify-between relative overflow-hidden"
+              className="p-8 rounded-3xl glass-card flex flex-col justify-between relative overflow-hidden"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-2xl font-bold text-purple-400/80">
+                  <span className="font-mono text-2xl font-bold text-[#c084fc]">
                     {item.step}
                   </span>
-                  <div className="p-2.5 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                  <div className="p-2.5 rounded-xl bg-[#c084fc]/10 text-[#c084fc] border border-[#c084fc]/25">
                     <Icon className="w-5 h-5" />
                   </div>
                 </div>
@@ -142,7 +142,7 @@ export function HowToJoin() {
                     className={`flex items-center justify-between w-full p-2.5 rounded-xl text-xs font-mono transition-all duration-300 ${
                       copied
                         ? "bg-emerald-500/20 border border-emerald-500/50 text-emerald-300 shadow-md shadow-emerald-950/30"
-                        : "bg-white/[0.04] hover:bg-purple-600/20 border border-white/[0.08] hover:border-purple-500/30 text-neutral-300"
+                        : "bg-white/[0.04] hover:bg-[#9333ea]/20 border border-white/[0.08] hover:border-[#c084fc]/40 text-neutral-300"
                     }`}
                   >
                     <span className="truncate">
@@ -153,7 +153,7 @@ export function HowToJoin() {
                     {copied ? (
                       <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0 ml-2 rotate-0 transition-transform" />
                     ) : (
-                      <Copy className="w-3.5 h-3.5 text-purple-400 shrink-0 ml-2" />
+                      <Copy className="w-3.5 h-3.5 text-[#c084fc] shrink-0 ml-2" />
                     )}
                   </button>
                 </div>

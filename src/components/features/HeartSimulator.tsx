@@ -14,14 +14,14 @@ export function HeartSimulator() {
     if (hearts <= 0) return { label: "Eliminated (Spectator)", color: "text-neutral-500", desc: "Needs clan revive beacon" };
     if (hearts <= 5) return { label: "Vulnerable Prey", color: "text-amber-500", desc: "Risk of complete elimination" };
     if (hearts <= 14) return { label: "Active Pack Member", color: "text-emerald-400", desc: "Balanced combat health" };
-    if (hearts <= 24) return { label: "Alpha Hunter", color: "text-purple-400", desc: "High heart reserve" };
+    if (hearts <= 24) return { label: "Alpha Hunter", color: "text-[#c084fc]", desc: "High heart reserve" };
     return { label: "Lethal Warlord", color: "text-red-500", desc: "Dominating the server leaderboard" };
   };
 
   const tier = getThreatTier(currentHearts);
 
   return (
-    <div className="w-full max-w-xl mx-auto p-6 sm:p-8 rounded-3xl glass-card bg-neutral-950/60 border border-white/[0.08] relative overflow-hidden">
+    <div className="w-full max-w-xl mx-auto p-6 sm:p-8 rounded-3xl glass-card bg-[#0d0d12] border border-white/[0.08] relative overflow-hidden">
       <div className="flex items-center gap-2.5 mb-6">
         <div className="p-2 rounded-xl bg-red-500/10 text-red-400 border border-red-500/20">
           <Heart className="w-4 h-4 fill-red-500/30" />
@@ -74,10 +74,10 @@ export function HeartSimulator() {
         <div>
           <div className="flex items-center justify-between text-xs text-neutral-300 mb-2 font-sans">
             <span className="flex items-center gap-1.5">
-              <Swords className="w-3.5 h-3.5 text-purple-400" />
+              <Swords className="w-3.5 h-3.5 text-[#c084fc]" />
               <span>Confirmed Kills</span>
             </span>
-            <span className="font-mono font-bold text-purple-400">{kills}</span>
+            <span className="font-mono font-bold text-[#c084fc]">{kills}</span>
           </div>
           <input
             type="range"
@@ -85,7 +85,7 @@ export function HeartSimulator() {
             max="30"
             value={kills}
             onChange={(e) => setKills(parseInt(e.target.value))}
-            className="w-full accent-purple-500 bg-neutral-800 rounded-lg h-1.5 cursor-pointer"
+            className="w-full accent-[#c084fc] bg-neutral-800 rounded-lg h-1.5 cursor-pointer"
           />
         </div>
 

@@ -20,15 +20,12 @@ export function Gamemodes() {
 
   return (
     <section id="gamemodes" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
-      {/* Background radial accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-950/15 blur-[120px] pointer-events-none" />
-
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto mb-16">
         <h2 className="font-bebas text-4xl sm:text-5xl tracking-wider text-neutral-100">
           FEATURED GAMEMODES
         </h2>
-        <p className="font-playfair italic text-sm sm:text-base text-neutral-400 mt-1">
+        <p className="font-playfair italic text-sm sm:text-base text-[#d8b4fe] mt-1">
           &ldquo;Choose your battlefield. Rise above the pack.&rdquo;
         </p>
       </div>
@@ -48,8 +45,8 @@ export function Gamemodes() {
                 mode.borderClass
               } ${
                 isExpanded
-                  ? "bg-white/[0.06] shadow-2xl border-white/20"
-                  : "bg-white/[0.02] hover:bg-white/[0.04]"
+                  ? "bg-[#14141c] shadow-2xl border-white/20"
+                  : "hover:border-[#c084fc]/40"
               }`}
             >
               {/* Laser Accent Line (Only Illuminates When Expanded) */}

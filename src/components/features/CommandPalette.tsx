@@ -188,10 +188,10 @@ export function CommandPalette() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 left-6 z-40 hidden md:flex items-center gap-2.5 px-3.5 py-2 rounded-full glass-panel bg-neutral-900/60 border border-neutral-800 hover:border-purple-500/40 text-neutral-400 hover:text-neutral-200 text-xs transition-all duration-200 backdrop-blur-xl shadow-lg group"
+        className="fixed bottom-6 left-6 z-40 hidden md:flex items-center gap-2.5 px-3.5 py-2 rounded-full glass-panel bg-[#0d0d12]/80 border border-white/[0.08] hover:border-[#c084fc]/40 text-neutral-400 hover:text-neutral-200 text-xs transition-all duration-200 backdrop-blur-xl shadow-lg group"
         aria-label="Open Command Palette"
       >
-        <Search className="w-3.5 h-3.5 text-neutral-400 group-hover:text-purple-400 transition-colors" />
+        <Search className="w-3.5 h-3.5 text-neutral-400 group-hover:text-[#c084fc] transition-colors" />
         <span className="font-sans">Search actions</span>
         <kbd className="px-1.5 py-0.5 rounded bg-neutral-800/80 border border-neutral-700/60 text-[10px] text-neutral-400">
           Ctrl K
@@ -203,12 +203,12 @@ export function CommandPalette() {
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-black/70 backdrop-blur-md animate-in fade-in duration-200">
       <div
-        className="relative w-full max-w-lg rounded-2xl glass-panel bg-neutral-950/90 border border-neutral-800 shadow-2xl shadow-purple-950/40 overflow-hidden flex flex-col"
+        className="relative w-full max-w-lg rounded-2xl glass-panel bg-[#0d0d12]/95 border border-white/[0.08] shadow-2xl shadow-black/80 overflow-hidden flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Search Input Bar */}
-        <div className="flex items-center gap-3 px-4 py-3.5 border-b border-neutral-800/80 bg-neutral-900/40">
-          <Search className="w-4 h-4 text-purple-400 shrink-0" />
+        <div className="flex items-center gap-3 px-4 py-3.5 border-b border-white/[0.06] bg-white/[0.02]">
+          <Search className="w-4 h-4 text-[#c084fc] shrink-0" />
           <input
             type="text"
             placeholder="Type a command or jump to page..."
@@ -238,10 +238,10 @@ export function CommandPalette() {
                 <button
                   key={action.id}
                   onClick={action.onSelect}
-                  className="flex items-center justify-between p-2.5 rounded-xl text-left hover:bg-neutral-800/50 hover:border-purple-500/20 border border-transparent transition-all group w-full"
+                  className="flex items-center justify-between p-2.5 rounded-xl text-left hover:bg-white/[0.04] hover:border-[#c084fc]/20 border border-transparent transition-all group w-full"
                 >
                   <div className="flex items-center gap-3 min-w-0">
-                    <div className="p-2 rounded-lg bg-neutral-900 border border-neutral-800 text-neutral-400 group-hover:text-purple-400 group-hover:border-purple-500/30 transition-colors shrink-0">
+                    <div className="p-2 rounded-lg bg-neutral-900 border border-white/[0.08] text-neutral-400 group-hover:text-[#c084fc] group-hover:border-[#c084fc]/30 transition-colors shrink-0">
                       <Icon className="w-4 h-4" />
                     </div>
                     <div className="min-w-0">

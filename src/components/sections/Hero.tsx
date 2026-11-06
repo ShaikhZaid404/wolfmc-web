@@ -47,7 +47,7 @@ export function Hero() {
         </h1>
 
         {/* Aesthetic Tagline (Playfair Display Italic) */}
-        <p className="font-playfair italic text-lg sm:text-2xl text-purple-300/90 mt-2 mb-4">
+        <p className="font-playfair italic text-lg sm:text-2xl text-[#d8b4fe] mt-2 mb-4">
           &ldquo;{SERVER_CONFIG.tagline}&rdquo;
         </p>
 
@@ -65,9 +65,9 @@ export function Hero() {
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Link
             href="#gamemodes"
-            className="flex items-center gap-2 px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-neutral-100 font-semibold text-xs tracking-wider uppercase shadow-lg shadow-purple-900/40 transition-all font-sans group"
+            className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#9333ea] hover:bg-[#8b24e0] text-neutral-100 font-semibold text-xs tracking-wider uppercase border border-[#c084fc]/40 shadow-lg shadow-[#9333ea]/20 transition-all font-sans group"
           >
-            <Swords className="w-4 h-4 text-purple-200 group-hover:rotate-12 transition-transform" />
+            <Swords className="w-4 h-4 text-[#d8b4fe] group-hover:rotate-12 transition-transform" />
             <span>Explore Gamemodes</span>
           </Link>
 
@@ -75,7 +75,7 @@ export function Hero() {
             href={SERVER_CONFIG.discordUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 rounded-xl glass-panel bg-white/[0.04] hover:bg-[#5865F2]/20 border border-white/[0.09] hover:border-[#5865F2]/40 text-neutral-200 hover:text-[#5865F2] font-semibold text-xs tracking-wider uppercase transition-all font-sans"
+            className="flex items-center gap-2 px-6 py-3 rounded-xl glass-panel hover:bg-[#5865F2]/20 hover:border-[#5865F2]/50 text-neutral-200 hover:text-[#5865F2] font-semibold text-xs tracking-wider uppercase transition-all font-sans"
           >
             <DiscordIcon className="w-4 h-4 text-[#5865F2]" />
             <span>Join Discord</span>

@@ -21,22 +21,22 @@ export function DiagnosticDrawer() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel bg-white/[0.02] hover:bg-white/[0.06] border border-white/[0.06] hover:border-purple-500/30 text-xs text-neutral-400 hover:text-neutral-200 transition-all font-sans"
+        className="flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel bg-white/[0.02] hover:bg-white/[0.06] border border-white/[0.06] hover:border-[#c084fc]/35 text-xs text-neutral-400 hover:text-neutral-200 transition-all font-sans"
       >
-        <Terminal className="w-3.5 h-3.5 text-purple-400" />
+        <Terminal className="w-3.5 h-3.5 text-[#c084fc]" />
         <span>Diagnostic Telemetry</span>
       </button>
 
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md animate-in fade-in duration-200">
           <div
-            className="w-full max-w-lg rounded-2xl glass-panel bg-neutral-950/95 border border-neutral-800 shadow-2xl shadow-purple-950/40 p-6 flex flex-col gap-4 font-mono text-xs"
+            className="w-full max-w-lg rounded-2xl glass-panel bg-[#0d0d12]/95 border border-white/[0.08] shadow-2xl shadow-black/80 p-6 flex flex-col gap-4 font-mono text-xs"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
-            <div className="flex items-center justify-between border-b border-neutral-800/80 pb-3">
+            <div className="flex items-center justify-between border-b border-white/[0.06] pb-3">
               <div className="flex items-center gap-2 text-neutral-200">
-                <Terminal className="w-4 h-4 text-purple-400" />
+                <Terminal className="w-4 h-4 text-[#c084fc]" />
                 <span className="font-semibold tracking-wider uppercase">
                   WolfMC Telemetry Console
                 </span>
@@ -48,7 +48,7 @@ export function DiagnosticDrawer() {
                   className="p-1 rounded-md text-neutral-500 hover:text-neutral-300 transition-colors"
                   title="Ping again"
                 >
-                  <RefreshCw className={`w-3.5 h-3.5 ${isRefreshing ? "animate-spin text-purple-400" : ""}`} />
+                  <RefreshCw className={`w-3.5 h-3.5 ${isRefreshing ? "animate-spin text-[#c084fc]" : ""}`} />
                 </button>
                 <button
                   onClick={() => setIsOpen(false)}
@@ -60,7 +60,7 @@ export function DiagnosticDrawer() {
             </div>
 
             {/* Diagnostic Logs */}
-            <div className="flex flex-col gap-2.5 p-4 rounded-xl bg-black/60 border border-neutral-800/60 text-neutral-400 leading-relaxed font-mono">
+            <div className="flex flex-col gap-2.5 p-4 rounded-xl bg-[#070709] border border-white/[0.06] text-neutral-400 leading-relaxed font-mono">
               <div className="flex items-center justify-between">
                 <span>[PROBE] Target Node:</span>
                 <span className="text-neutral-200">139.99.68.33 (Singapore / Asia)</span>
@@ -82,7 +82,7 @@ export function DiagnosticDrawer() {
 
               <div className="flex items-center justify-between">
                 <span>[LATENCY] Roundtrip Ping:</span>
-                <span className="text-purple-400 font-bold">{ping} ms</span>
+                <span className="text-[#c084fc] font-bold">{ping} ms</span>
               </div>
 
               <div className="flex items-center justify-between">

@@ -32,11 +32,11 @@ export function CartDrawer() {
       />
 
       <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-neutral-950 border-l border-white/[0.08] shadow-2xl flex flex-col justify-between">
+        <div className="w-screen max-w-md bg-[#0d0d12] border-l border-white/[0.08] shadow-2xl flex flex-col justify-between">
           {/* Drawer Header */}
           <div className="p-6 border-b border-white/[0.06] flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              <div className="p-2 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20">
+              <div className="p-2 rounded-xl bg-[#c084fc]/10 text-[#c084fc] border border-[#c084fc]/25">
                 <ShoppingBag className="w-4 h-4" />
               </div>
               <h2 className="font-bebas text-2xl tracking-wider text-neutral-100">
@@ -97,12 +97,12 @@ export function CartDrawer() {
                           {item.name}
                         </span>
                         {item.badge && (
-                          <span className="px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                          <span className="px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-[#c084fc]/15 text-[#d8b4fe] border border-[#c084fc]/30">
                             {item.badge}
                           </span>
                         )}
                       </div>
-                      <p className="text-xs font-mono font-bold text-purple-400">
+                      <p className="text-xs font-mono font-bold text-[#c084fc]">
                         {linePrice}
                       </p>
                     </div>
@@ -148,7 +148,7 @@ export function CartDrawer() {
 
           {/* Drawer Footer */}
           {cart.length > 0 && (
-            <div className="p-6 border-t border-white/[0.06] bg-neutral-950 flex flex-col gap-4">
+            <div className="p-6 border-t border-white/[0.06] bg-[#0d0d12] flex flex-col gap-4">
               <div className="flex flex-col gap-1">
                 <div className="flex items-center justify-between">
                   <span className="text-xs uppercase tracking-wider font-semibold text-neutral-400 font-sans">
@@ -156,7 +156,7 @@ export function CartDrawer() {
                   </span>
                   <span className="font-bebas text-2xl tracking-wider text-neutral-100">
                     {formatPrice(totalUSD)}
-                    {hasCustom && <span className="text-xs text-purple-400 ml-1 font-sans">+ Custom Quote</span>}
+                    {hasCustom && <span className="text-xs text-[#c084fc] ml-1 font-sans">+ Custom Quote</span>}
                   </span>
                 </div>
                 <p className="text-[11px] text-neutral-500 font-sans leading-relaxed">
@@ -170,7 +170,7 @@ export function CartDrawer() {
                     setIsCartOpen(false);
                     setIsCheckoutOpen(true);
                   }}
-                  className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-xs uppercase tracking-wider shadow-lg shadow-purple-900/40 transition-all font-sans group cursor-pointer"
+                  className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-[#9333ea] hover:bg-[#8b24e0] text-white font-semibold text-xs uppercase tracking-wider border border-[#c084fc]/40 transition-all font-sans group cursor-pointer"
                 >
                   <Ticket className="w-4 h-4" />
                   <span>Proceed to Checkout</span>

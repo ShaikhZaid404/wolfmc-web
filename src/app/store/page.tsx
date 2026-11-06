@@ -46,7 +46,7 @@ export default function StoreHubPage() {
       {/* Top Controls: Currency & Breadcrumb */}
         <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/[0.04]">
           <div className="flex items-center gap-2 text-xs font-mono text-neutral-400">
-            <Link href="/" className="hover:text-purple-400 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-[#c084fc] transition-colors">Home</Link>
             <span>/</span>
             <span className="text-neutral-200">Store</span>
           </div>
@@ -56,7 +56,7 @@ export default function StoreHubPage() {
 
         {/* Hero Section */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-pill bg-purple-500/10 border border-purple-500/20 text-purple-400 mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-pill bg-[#c084fc]/10 border border-[#c084fc]/25 text-[#c084fc] mb-4">
             <Ticket className="w-3.5 h-3.5" />
             <span className="text-[11px] font-semibold uppercase tracking-wider font-sans">
               Delivery Via Discord Ticket
@@ -76,22 +76,19 @@ export default function StoreHubPage() {
         <div className="max-w-xl mx-auto mb-20">
           <Link
             href="/store/boxpvp"
-            className="group block p-8 sm:p-10 rounded-3xl glass-card bg-neutral-950/70 border border-white/[0.08] hover:border-purple-500/50 transition-all duration-300 relative overflow-hidden shadow-2xl hover:shadow-purple-950/30"
+            className="group block p-8 sm:p-10 rounded-3xl glass-card bg-[#0d0d12] border border-white/[0.08] hover:border-[#c084fc]/40 transition-all duration-300 relative overflow-hidden"
           >
-            {/* Ambient Background Glow */}
-            <div className="absolute top-0 right-0 w-64 h-32 bg-purple-600/10 group-hover:bg-purple-600/20 blur-[70px] pointer-events-none transition-all duration-500" />
-
             <div className="flex items-center justify-between mb-6">
-              <div className="p-3.5 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-400 group-hover:scale-110 transition-transform duration-300">
+              <div className="p-3.5 rounded-2xl bg-[#c084fc]/10 border border-[#c084fc]/25 text-[#c084fc] group-hover:scale-105 transition-transform duration-300">
                 <Swords className="w-7 h-7" />
               </div>
 
-              <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-white/[0.05] border border-white/[0.08] text-purple-300">
+              <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#14141c] border border-white/[0.08] text-[#d8b4fe]">
                 From $1.00
               </span>
             </div>
 
-            <h2 className="font-bebas text-3xl sm:text-4xl tracking-wider text-neutral-100 mb-2 group-hover:text-purple-300 transition-colors">
+            <h2 className="font-bebas text-3xl sm:text-4xl tracking-wider text-neutral-100 mb-2 group-hover:text-[#c084fc] transition-colors">
               BOXPVP STORE
             </h2>
 
@@ -104,7 +101,7 @@ export default function StoreHubPage() {
                 <strong className="text-neutral-200">8</strong> Ranks · <strong className="text-neutral-200">4</strong> Crate Keys
               </span>
 
-              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-purple-400 group-hover:text-purple-300 uppercase tracking-wider font-sans">
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#c084fc] group-hover:text-[#d8b4fe] uppercase tracking-wider font-sans">
                 <span>Browse BoxPvP Store</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </span>
@@ -119,9 +116,11 @@ export default function StoreHubPage() {
             return (
               <div
                 key={feature.title}
-                className="p-6 rounded-2xl glass-card bg-white/[0.02] border border-white/[0.06] flex flex-col gap-3"
+                className="p-6 rounded-2xl glass-card bg-[#0d0d12] border border-white/[0.06] flex flex-col gap-3"
               >
-                <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-[#c084fc]/10 border border-[#c084fc]/20 flex items-center justify-center text-[#c084fc] shrink-0">
+                  <Icon className="w-5 h-5" />
+                </div>
                   <Icon className="w-5 h-5" />
                 </div>
                 <h3 className="font-bebas text-xl tracking-wider text-neutral-100">

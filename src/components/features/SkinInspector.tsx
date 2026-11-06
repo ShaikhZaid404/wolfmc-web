@@ -22,9 +22,9 @@ export function SkinInspector() {
   ];
 
   return (
-    <div className="w-full max-w-xl mx-auto p-6 sm:p-8 rounded-3xl glass-card bg-neutral-950/60 border border-white/[0.08] relative overflow-hidden">
+    <div className="w-full max-w-xl mx-auto p-6 sm:p-8 rounded-3xl glass-card bg-[#0d0d12] border border-white/[0.08] relative overflow-hidden">
       <div className="flex items-center gap-2.5 mb-6">
-        <div className="p-2 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20">
+        <div className="p-2 rounded-xl bg-[#c084fc]/10 text-[#c084fc] border border-[#c084fc]/25">
           <User className="w-4 h-4" />
         </div>
         <div>
@@ -45,12 +45,12 @@ export function SkinInspector() {
             value={ign}
             onChange={(e) => setIgn(e.target.value)}
             placeholder="Enter player IGN (e.g. Zaid1621)"
-            className="w-full px-4 py-2.5 rounded-xl glass-panel bg-white/[0.03] border border-white/[0.08] focus:border-purple-500/50 text-xs sm:text-sm text-neutral-100 placeholder-neutral-500 focus:outline-none font-mono"
+            className="w-full px-4 py-2.5 rounded-xl glass-panel bg-white/[0.03] border border-white/[0.08] focus:border-[#c084fc]/50 text-xs sm:text-sm text-neutral-100 placeholder-neutral-500 focus:outline-none font-mono"
           />
         </div>
         <button
           type="submit"
-          className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-xs font-semibold text-white shadow-md shadow-purple-900/30 transition-all font-sans shrink-0"
+          className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#9333ea] hover:bg-[#8b24e0] text-xs font-semibold text-white border border-[#c084fc]/40 transition-all font-sans shrink-0"
         >
           <Search className="w-3.5 h-3.5" />
           <span>Inspect</span>
@@ -59,7 +59,7 @@ export function SkinInspector() {
 
       {/* Skin Render Box */}
       <div className="flex flex-col sm:flex-row items-center gap-6 p-6 rounded-2xl glass-panel bg-white/[0.02] border border-white/[0.06]">
-        <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex items-center justify-center shrink-0 rounded-2xl overflow-hidden border border-purple-500/30 shadow-xl bg-neutral-900/60">
+        <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex items-center justify-center shrink-0 rounded-2xl overflow-hidden border border-white/[0.08] shadow-xl bg-neutral-900/60">
           <Image
             src={
               currentSkin.toLowerCase() === "thegolu" || currentSkin.toLowerCase() === "golu"
@@ -92,7 +92,7 @@ export function SkinInspector() {
           </div>
 
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2 pt-2 border-t border-white/[0.04]">
-            <span className="px-2.5 py-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-[11px] font-semibold text-purple-300 font-sans">
+            <span className="px-2.5 py-1 rounded-md bg-[#c084fc]/15 border border-[#c084fc]/30 text-[11px] font-semibold text-[#d8b4fe] font-sans">
               WolfMC Ready
             </span>
             <span className="px-2.5 py-1 rounded-md bg-white/[0.03] border border-white/[0.06] text-[11px] text-neutral-400 font-sans">

@@ -26,7 +26,7 @@ export default function PrivacyPage() {
     <div className="py-28 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
       <div className="p-8 sm:p-12 rounded-3xl glass-panel bg-white/[0.02] border border-white/[0.06] flex flex-col gap-8 text-neutral-300 font-sans text-xs sm:text-sm leading-relaxed">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-pill bg-purple-500/10 border border-purple-500/20 text-purple-400 mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-pill bg-[#c084fc]/10 border border-[#c084fc]/25 text-[#c084fc] mb-3">
             <Shield className="w-3.5 h-3.5" />
             <span className="text-[10px] font-semibold uppercase tracking-wider font-sans">
               Data Protection

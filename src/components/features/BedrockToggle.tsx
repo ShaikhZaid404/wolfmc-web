@@ -26,12 +26,12 @@ export function BedrockToggle() {
   return (
     <div className="flex flex-col items-center gap-3 w-full max-w-md mx-auto">
       {/* Switcher Tabs */}
-      <div className="flex items-center p-1 rounded-full glass-panel bg-white/[0.03] border border-white/[0.08]">
+      <div className="flex items-center p-1 rounded-full glass-panel">
         <button
           onClick={() => setActiveTab("java")}
           className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all font-sans ${
             activeTab === "java"
-              ? "bg-purple-600 text-white shadow-lg shadow-purple-900/40"
+              ? "bg-[#9333ea] text-white border border-[#c084fc]/40 shadow-md shadow-[#9333ea]/20"
               : "text-neutral-400 hover:text-neutral-200"
           }`}
         >
@@ -43,7 +43,7 @@ export function BedrockToggle() {
           onClick={() => setActiveTab("bedrock")}
           className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all font-sans ${
             activeTab === "bedrock"
-              ? "bg-purple-600 text-white shadow-lg shadow-purple-900/40"
+              ? "bg-[#9333ea] text-white border border-[#c084fc]/40 shadow-md shadow-[#9333ea]/20"
               : "text-neutral-400 hover:text-neutral-200"
           }`}
         >
@@ -53,7 +53,7 @@ export function BedrockToggle() {
       </div>
 
       {/* Address & Copy Container */}
-      <div className="flex items-center justify-between gap-3 w-full p-2.5 pl-4 rounded-xl glass-panel bg-white/[0.03] border border-white/[0.08] hover:border-purple-500/30 transition-all">
+      <div className="flex items-center justify-between gap-3 w-full p-2.5 pl-4 rounded-xl glass-panel hover:border-[#c084fc]/40 transition-all">
         <div className="flex items-center gap-3 min-w-0">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
           <div className="flex flex-col min-w-0">
@@ -75,7 +75,7 @@ export function BedrockToggle() {
           className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold transition-all duration-300 shrink-0 font-sans ${
             copied
               ? "bg-emerald-500/20 border border-emerald-500/50 text-emerald-300 scale-105 shadow-md shadow-emerald-950/30"
-              : "bg-white/[0.05] hover:bg-purple-600/20 border border-white/[0.1] hover:border-purple-500/40 text-neutral-200 hover:text-purple-300"
+              : "bg-white/[0.04] hover:bg-[#9333ea]/20 border border-white/[0.08] hover:border-[#c084fc]/40 text-neutral-200 hover:text-[#d8b4fe]"
           }`}
         >
           {copied ? (

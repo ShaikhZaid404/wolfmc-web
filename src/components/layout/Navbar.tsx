@@ -51,7 +51,7 @@ export function Navbar() {
       <header
         className={`pointer-events-auto w-full transition-all duration-300 ${
           scrolled
-            ? "bg-[#050505]/80 backdrop-blur-xl border-b border-white/[0.06] shadow-xl shadow-black/40 py-3.5"
+            ? "bg-[#08080a]/90 backdrop-blur-md border-b border-white/[0.08] shadow-xl shadow-black/60 py-3.5"
             : "bg-transparent py-4"
         }`}
       >
@@ -68,18 +68,18 @@ export function Navbar() {
               priority
             />
           </div>
-          <span className="font-bebas text-2xl tracking-wider text-neutral-100 group-hover:text-purple-400 transition-colors">
+          <span className="font-bebas text-2xl tracking-wider text-neutral-100 group-hover:text-[#c084fc] transition-colors">
             WOLFMC
           </span>
         </Link>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-1 glass-pill px-4 py-1.5 rounded-full bg-white/[0.02]">
+        <nav className="hidden md:flex items-center gap-1 glass-pill px-4 py-1.5 rounded-full">
           {SERVER_CONFIG.navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-neutral-400 hover:text-neutral-100 transition-colors rounded-full hover:bg-white/[0.05]"
+              className="px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-neutral-400 hover:text-[#d8b4fe] transition-colors rounded-full hover:bg-white/[0.05]"
             >
               {link.name}
             </Link>
@@ -94,7 +94,7 @@ export function Navbar() {
             className={`flex items-center gap-2 px-3.5 py-1.5 rounded-full transition-all duration-500 ease-in-out cursor-pointer group select-none ${
               copied
                 ? "bg-emerald-500/20 border border-emerald-500/50 text-emerald-300 shadow-lg shadow-emerald-950/40"
-                : "glass-pill bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-purple-500/40 text-neutral-300"
+                : "glass-pill hover:border-[#c084fc]/50 text-neutral-300"
             }`}
             title="Click to copy server IP"
           >
@@ -108,7 +108,7 @@ export function Navbar() {
                 </span>
               ) : (
                 <span className="font-mono text-[11px] text-neutral-200 whitespace-nowrap animate-in fade-in duration-300 flex items-center gap-1.5">
-                  <Users className="w-3 h-3 text-purple-400 inline shrink-0" />
+                  <Users className="w-3 h-3 text-[#c084fc] inline shrink-0" />
                   <span>
                     {status.players.online}/{status.players.max} Online
                   </span>
@@ -120,7 +120,7 @@ export function Navbar() {
               {copied ? (
                 <Check className="w-3.5 h-3.5 text-emerald-400 scale-110" />
               ) : (
-                <Copy className="w-3.5 h-3.5 text-neutral-500 group-hover:text-purple-300 transition-colors" />
+                <Copy className="w-3.5 h-3.5 text-neutral-500 group-hover:text-[#c084fc] transition-colors" />
               )}
             </div>
           </button>
@@ -128,13 +128,13 @@ export function Navbar() {
           {/* Cart Drawer Trigger */}
           <button
             onClick={() => setIsCartOpen(true)}
-            className="relative p-2 rounded-full glass-pill bg-white/[0.03] hover:bg-purple-600/20 border border-white/[0.08] hover:border-purple-500/40 text-neutral-400 hover:text-purple-300 transition-all cursor-pointer"
+            className="relative p-2 rounded-full glass-pill hover:border-[#c084fc]/50 text-neutral-400 hover:text-[#d8b4fe] transition-all cursor-pointer"
             aria-label="View Order Cart"
             title="View Order Cart"
           >
             <ShoppingBag className="w-4 h-4" />
             {itemCount > 0 && (
-              <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-purple-600 text-[10px] font-bold text-white flex items-center justify-center shadow-md animate-in zoom-in">
+              <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-[#9333ea] border border-[#c084fc]/50 text-[10px] font-bold text-white flex items-center justify-center shadow-md animate-in zoom-in">
                 {itemCount}
               </span>
             )}
@@ -145,7 +145,7 @@ export function Navbar() {
             href={SERVER_CONFIG.discordUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-full glass-pill bg-white/[0.03] hover:bg-[#5865F2]/20 border border-white/[0.08] hover:border-purple-500/40 text-neutral-400 hover:text-[#5865F2] transition-all"
+            className="p-2 rounded-full glass-pill hover:bg-[#5865F2]/20 hover:border-[#5865F2]/50 text-neutral-400 hover:text-[#5865F2] transition-all"
             aria-label="Join Official Discord"
             title="Join Official Discord"
           >
@@ -190,14 +190,14 @@ export function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="sm:hidden border-b border-white/[0.08] bg-[#050505]/95 backdrop-blur-2xl px-6 py-6 animate-in slide-in-from-top-2 duration-200">
+        <div className="sm:hidden border-b border-white/[0.08] bg-[#08080a]/98 backdrop-blur-md px-6 py-6 animate-in slide-in-from-top-2 duration-200">
           <div className="flex flex-col gap-3">
             {SERVER_CONFIG.navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-between py-2 text-sm uppercase tracking-wider font-semibold text-neutral-300 hover:text-purple-400 border-b border-white/[0.04]"
+                className="flex items-center justify-between py-2 text-sm uppercase tracking-wider font-semibold text-neutral-300 hover:text-[#c084fc] border-b border-white/[0.04]"
               >
                 <span>{link.name}</span>
                 <ChevronRight className="w-4 h-4 text-neutral-600" />
@@ -209,10 +209,10 @@ export function Navbar() {
                 handleCopyIp();
                 setMobileMenuOpen(false);
               }}
-              className="mt-3 flex items-center justify-between w-full py-2.5 px-4 rounded-xl glass-panel bg-white/[0.05] border border-purple-500/30 text-xs font-semibold text-neutral-200"
+              className="mt-3 flex items-center justify-between w-full py-2.5 px-4 rounded-xl glass-panel border border-[#c084fc]/30 text-xs font-semibold text-neutral-200"
             >
               <span className="flex items-center gap-2">
-                <Copy className="w-3.5 h-3.5 text-purple-400" />
+                <Copy className="w-3.5 h-3.5 text-[#c084fc]" />
                 <span>{SERVER_CONFIG.ip.java}</span>
               </span>
               <span className="font-mono text-neutral-400 text-[11px]">

@@ -13,21 +13,21 @@ export function HalloweenBanner() {
   if (!visible || !isHalloweenActive) return null;
 
   return (
-    <div className="w-full bg-gradient-to-r from-orange-950/90 via-purple-950/90 to-orange-950/90 border-b border-orange-500/30 backdrop-blur-md px-4 py-2 text-xs font-sans text-orange-200 flex items-center justify-between gap-3 relative z-50 animate-in fade-in slide-in-from-top duration-300 pointer-events-auto shadow-lg shadow-black/50">
+    <div className="w-full bg-[#0d0d12] border-b border-[#c084fc]/30 px-4 py-2 text-xs font-sans text-neutral-200 flex items-center justify-between gap-3 relative z-50 animate-in fade-in slide-in-from-top duration-300 pointer-events-auto shadow-lg shadow-black/80">
       <div className="max-w-7xl mx-auto flex-1 flex items-center justify-center gap-2 text-center flex-wrap">
-        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-orange-500/20 border border-orange-500/30 text-[10px] font-bold uppercase tracking-wider text-orange-400">
+        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#c084fc]/15 border border-[#c084fc]/30 text-[10px] font-bold uppercase tracking-wider text-[#d8b4fe]">
           <Sparkles className="w-3 h-3 animate-spin" />
           Event Live
         </span>
         <span className="font-semibold text-neutral-100">
           Halloween Update Out Now!
         </span>
-        <span className="text-orange-300/80 hidden sm:inline">
+        <span className="text-neutral-400 hidden sm:inline">
           Limited Ghost & Pumpkin ranks, plus exclusive crate keys — ends 31 October.
         </span>
         <Link
           href="/store/boxpvp#boxpvp-halloween"
-          className="inline-flex items-center gap-1 font-bold text-orange-400 hover:text-orange-300 underline underline-offset-2 ml-1 group"
+          className="inline-flex items-center gap-1 font-bold text-[#c084fc] hover:text-[#d8b4fe] underline underline-offset-2 ml-1 group"
         >
           <span>View Seasonal Deals</span>
           <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
@@ -36,7 +36,7 @@ export function HalloweenBanner() {
 
       <button
         onClick={() => setVisible(false)}
-        className="p-1 text-orange-400/60 hover:text-orange-300 transition-colors shrink-0"
+        className="p-1 text-neutral-400 hover:text-neutral-200 transition-colors shrink-0"
         aria-label="Dismiss banner"
       >
         <X className="w-3.5 h-3.5" />

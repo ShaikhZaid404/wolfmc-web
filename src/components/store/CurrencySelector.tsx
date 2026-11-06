@@ -24,17 +24,17 @@ export function CurrencySelector() {
     <div className="relative inline-block text-left" ref={dropdownRef}>
       <button
         onClick={() => setOpen((prev) => !prev)}
-        className="flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-purple-500/40 text-xs text-neutral-300 font-sans transition-all"
+        className="flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#c084fc]/40 text-xs text-neutral-300 font-sans transition-all"
         title="Change store display currency"
       >
-        <Globe className="w-3.5 h-3.5 text-purple-400" />
+        <Globe className="w-3.5 h-3.5 text-[#c084fc]" />
         <span className="font-semibold text-neutral-100">{currency.code}</span>
         <span className="text-neutral-400">({currency.symbol.trim()})</span>
         <ChevronDown className={`w-3.5 h-3.5 text-neutral-400 transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-2 w-48 rounded-2xl glass-card bg-neutral-950/95 border border-white/[0.1] shadow-2xl backdrop-blur-2xl p-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
+        <div className="absolute right-0 mt-2 w-48 rounded-2xl glass-card bg-[#0d0d12]/95 border border-white/[0.1] shadow-2xl backdrop-blur-2xl p-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
           <div className="px-3 py-1.5 text-[10px] uppercase font-bold tracking-wider text-neutral-500 border-b border-white/[0.04] mb-1">
             Display Currency
           </div>
@@ -50,7 +50,7 @@ export function CurrencySelector() {
                   }}
                   className={`flex items-center justify-between px-3 py-2 rounded-xl text-xs font-sans text-left transition-colors ${
                     isSelected
-                      ? "bg-purple-600/20 text-purple-300 font-semibold"
+                      ? "bg-[#c084fc]/15 text-[#d8b4fe] font-semibold"
                       : "text-neutral-300 hover:bg-white/[0.05] hover:text-white"
                   }`}
                 >

@@ -87,7 +87,7 @@ export function BoxPvPStoreClient() {
 
         {/* Hero Section */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-pill bg-purple-500/10 border border-purple-500/20 text-purple-400 mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-pill bg-[#c084fc]/10 border border-[#c084fc]/25 text-[#c084fc] mb-4">
             <Swords className="w-3.5 h-3.5" />
             <span className="text-[11px] font-semibold uppercase tracking-wider font-sans">
               BoxPvP Gamemode
@@ -110,28 +110,28 @@ export function BoxPvPStoreClient() {
           <div className="flex flex-wrap items-center justify-center gap-2.5 mt-8">
             <a
               href="#boxpvp-halloween"
-              className="px-4 py-1.5 rounded-full glass-panel bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 text-orange-300 text-xs font-semibold font-sans transition-all flex items-center gap-1.5"
+              className="px-4 py-1.5 rounded-full glass-panel hover:border-[#c084fc]/40 text-neutral-300 text-xs font-semibold font-sans transition-all flex items-center gap-1.5"
             >
-              <Sparkles className="w-3 h-3 text-orange-400" />
+              <Sparkles className="w-3 h-3 text-[#c084fc]" />
               <span>Halloween (2)</span>
             </a>
             <a
               href="#boxpvp-ranks"
-              className="px-4 py-1.5 rounded-full glass-panel bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] text-neutral-300 text-xs font-semibold font-sans transition-all flex items-center gap-1.5"
+              className="px-4 py-1.5 rounded-full glass-panel hover:border-[#c084fc]/40 text-neutral-300 text-xs font-semibold font-sans transition-all flex items-center gap-1.5"
             >
-              <Crown className="w-3 h-3 text-purple-400" />
+              <Crown className="w-3 h-3 text-[#c084fc]" />
               <span>Ranks (6)</span>
             </a>
             <a
               href="#boxpvp-keys"
-              className="px-4 py-1.5 rounded-full glass-panel bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] text-neutral-300 text-xs font-semibold font-sans transition-all flex items-center gap-1.5"
+              className="px-4 py-1.5 rounded-full glass-panel hover:border-[#c084fc]/40 text-neutral-300 text-xs font-semibold font-sans transition-all flex items-center gap-1.5"
             >
               <Key className="w-3 h-3 text-cyan-400" />
               <span>Crate Keys (4)</span>
             </a>
             <a
               href="#boxpvp-compare"
-              className="px-4 py-1.5 rounded-full glass-panel bg-white/[0.03] hover:bg-white/[0.08] border border-white/[0.08] text-neutral-300 text-xs font-semibold font-sans transition-all"
+              className="px-4 py-1.5 rounded-full glass-panel hover:border-[#c084fc]/40 text-neutral-300 text-xs font-semibold font-sans transition-all"
             >
               <span>Compare Perks</span>
             </a>
@@ -140,10 +140,10 @@ export function BoxPvPStoreClient() {
 
         {/* 1. Halloween Ranks Section */}
         <section id="boxpvp-halloween" className="mb-20 scroll-mt-24">
-          <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-orange-950/20 to-neutral-950/40 border border-orange-500/20 mb-8">
+          <div className="p-6 sm:p-8 rounded-3xl bg-[#0d0d12] border border-white/[0.08] mb-8">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-orange-500/20 border border-orange-500/30 text-[10px] font-bold uppercase tracking-wider text-orange-400 mb-2">
+                <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#c084fc]/15 border border-[#c084fc]/30 text-[10px] font-bold uppercase tracking-wider text-[#d8b4fe] mb-2">
                   <Sparkles className="w-3 h-3" />
                   Limited Seasonal Ranks
                 </div>
@@ -155,7 +155,7 @@ export function BoxPvPStoreClient() {
                 </p>
               </div>
 
-              <span className="px-3.5 py-1.5 rounded-xl bg-orange-500/10 border border-orange-500/20 text-orange-300 text-xs font-mono font-bold shrink-0">
+              <span className="px-3.5 py-1.5 rounded-xl bg-[#14141c] border border-white/[0.08] text-[#d8b4fe] text-xs font-mono font-bold shrink-0">
                 2 Packages
               </span>
             </div>
@@ -242,7 +242,7 @@ export function BoxPvPStoreClient() {
         <section id="boxpvp-ranks" className="mb-20 scroll-mt-24">
           <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/[0.06]">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-[10px] font-bold uppercase tracking-wider text-purple-400 mb-1">
+              <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#c084fc]/10 border border-[#c084fc]/25 text-[10px] font-bold uppercase tracking-wider text-[#c084fc] mb-1">
                 <Crown className="w-3 h-3" />
                 Permanent Ranks
               </div>
@@ -262,21 +262,21 @@ export function BoxPvPStoreClient() {
               const isPopular = rank.popular;
               const isUltimate = rank.ultimate;
 
-              let borderStyle = "border-white/[0.08] hover:border-purple-500/40";
+              let borderStyle = "border-white/[0.08] hover:border-[#c084fc]/40";
               let badgeColor = "bg-white/[0.05] text-neutral-400 border-white/[0.08]";
 
               if (isPopular) {
-                borderStyle = "border-purple-500/60 shadow-xl shadow-purple-950/40 bg-neutral-950/90";
-                badgeColor = "bg-purple-500/20 text-purple-300 border-purple-500/40";
+                borderStyle = "border-[#c084fc]/50 bg-[#121218]";
+                badgeColor = "bg-[#c084fc]/15 text-[#d8b4fe] border-[#c084fc]/35";
               } else if (isUltimate) {
-                borderStyle = "border-cyan-500/40 shadow-xl shadow-cyan-950/30 bg-neutral-950/90";
-                badgeColor = "bg-cyan-500/20 text-cyan-300 border-cyan-500/40";
+                borderStyle = "border-[#c084fc]/70 bg-[#14141c]";
+                badgeColor = "bg-[#c084fc]/25 text-[#d8b4fe] border-[#c084fc]/45";
               }
 
               return (
                 <div
                   key={rank.id}
-                  className={`p-7 rounded-3xl glass-card bg-neutral-950/70 border flex flex-col justify-between relative transition-all duration-300 ${borderStyle}`}
+                  className={`p-7 rounded-3xl glass-card bg-[#0d0d12] border flex flex-col justify-between relative transition-all duration-300 ${borderStyle}`}
                 >
                   <div>
                     {/* Badge & Tier */}
@@ -299,9 +299,9 @@ export function BoxPvPStoreClient() {
                         </span>
                       </div>
                       {isUltimate ? (
-                        <Crown className="w-4 h-4 text-cyan-400" />
+                        <Crown className="w-4 h-4 text-[#c084fc]" />
                       ) : isPopular ? (
-                        <Star className="w-4 h-4 text-purple-400" />
+                        <Star className="w-4 h-4 text-[#c084fc]" />
                       ) : (
                         <Shield className="w-4 h-4 text-neutral-500" />
                       )}
@@ -317,7 +317,7 @@ export function BoxPvPStoreClient() {
                           {rank.prefix} Prefix
                         </span>
                       </div>
-                      <span className="font-bebas text-3xl tracking-wider text-purple-400">
+                      <span className="font-bebas text-3xl tracking-wider text-[#c084fc]">
                         {formatPrice(rank.price)}
                       </span>
                     </div>
@@ -326,7 +326,7 @@ export function BoxPvPStoreClient() {
                     <div className="flex flex-col gap-2 mb-5">
                       {(isExpanded ? rank.perks : rank.perks?.slice(0, 4))?.map((perk, i) => (
                         <div key={i} className="flex items-center gap-2 text-xs text-neutral-300 font-sans">
-                          <Check className="w-3.5 h-3.5 text-purple-400 shrink-0" />
+                          <Check className="w-3.5 h-3.5 text-[#c084fc] shrink-0" />
                           <span>{perk}</span>
                         </div>
                       ))}
@@ -335,7 +335,7 @@ export function BoxPvPStoreClient() {
                     {rank.perks && rank.perks.length > 4 && (
                       <button
                         onClick={() => togglePerkExpand(rank.id)}
-                        className="text-[11px] font-semibold text-purple-400 hover:text-purple-300 mb-5 flex items-center gap-1 font-sans"
+                        className="text-[11px] font-semibold text-[#c084fc] hover:text-[#d8b4fe] mb-5 flex items-center gap-1 font-sans"
                       >
                         <span>{isExpanded ? "Show Less" : `+ ${rank.perks.length - 4} More Perks`}</span>
                         {isExpanded ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
@@ -347,8 +347,8 @@ export function BoxPvPStoreClient() {
                     onClick={() => addToCart(rank.id)}
                     className={`w-full flex items-center justify-center gap-2 py-3 px-5 rounded-xl font-semibold text-xs uppercase tracking-wider transition-all font-sans cursor-pointer ${
                       isPopular || isUltimate
-                        ? "bg-purple-600 hover:bg-purple-500 text-white shadow-md shadow-purple-900/40"
-                        : "bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.08] text-neutral-200 hover:text-white"
+                        ? "bg-[#9333ea] hover:bg-[#8b24e0] text-white border border-[#c084fc]/40"
+                        : "bg-white/[0.05] hover:bg-white/[0.1] hover:border-[#c084fc]/30 border border-white/[0.08] text-neutral-200 hover:text-white"
                     }`}
                   >
                     <ShoppingBag className="w-3.5 h-3.5" />
@@ -360,10 +360,10 @@ export function BoxPvPStoreClient() {
           </div>
 
           {/* Custom Rank Request Card */}
-          <div className="p-7 sm:p-8 rounded-3xl glass-card bg-neutral-950/60 border border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="p-7 sm:p-8 rounded-3xl glass-card bg-[#0d0d12] border border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">
               {customItem.image ? (
-                <div className="relative w-14 h-14 rounded-2xl overflow-hidden bg-neutral-900 border border-purple-500/20 shrink-0 shadow-md">
+                <div className="relative w-14 h-14 rounded-2xl overflow-hidden bg-neutral-900 border border-[#c084fc]/20 shrink-0 shadow-md">
                   <Image
                     src={customItem.image}
                     alt={customItem.name}
@@ -374,7 +374,7 @@ export function BoxPvPStoreClient() {
                   />
                 </div>
               ) : (
-                <div className="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center shrink-0">
+                <div className="w-14 h-14 rounded-2xl bg-[#c084fc]/10 border border-[#c084fc]/20 text-[#c084fc] flex items-center justify-center shrink-0">
                   <Wrench className="w-6 h-6" />
                 </div>
               )}
@@ -395,7 +395,7 @@ export function BoxPvPStoreClient() {
 
             <button
               onClick={() => addToCart(customItem.id)}
-              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.08] text-xs font-semibold uppercase tracking-wider text-neutral-200 font-sans shrink-0 cursor-pointer"
+              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white/[0.05] hover:bg-white/[0.1] hover:border-[#c084fc]/40 border border-white/[0.08] text-xs font-semibold uppercase tracking-wider text-neutral-200 hover:text-white font-sans shrink-0 cursor-pointer"
             >
               Add Custom Request
             </button>
@@ -413,7 +413,7 @@ export function BoxPvPStoreClient() {
             </p>
           </div>
 
-          <div className="overflow-x-auto rounded-3xl glass-card bg-neutral-950/70 border border-white/[0.08] shadow-2xl">
+          <div className="overflow-x-auto rounded-3xl glass-card bg-[#0d0d12] border border-white/[0.08]">
             <table className="w-full text-left border-collapse text-xs font-sans min-w-[650px]">
               <thead>
                 <tr className="border-b border-white/[0.06] bg-white/[0.02]">
@@ -452,7 +452,7 @@ export function BoxPvPStoreClient() {
                           <span
                             className={
                               isPositive
-                                ? "text-purple-400 font-bold"
+                                ? "text-[#c084fc] font-bold"
                                 : valDisplay === "—"
                                 ? "text-neutral-600"
                                 : "text-neutral-200"
@@ -474,7 +474,7 @@ export function BoxPvPStoreClient() {
         <section id="boxpvp-keys" className="mb-16 scroll-mt-24">
           <div className="flex items-center justify-between mb-8 pb-4 border-b border-white/[0.06]">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-[10px] font-bold uppercase tracking-wider text-cyan-400 mb-1">
+              <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#c084fc]/10 border border-[#c084fc]/25 text-[10px] font-bold uppercase tracking-wider text-[#c084fc] mb-1">
                 <Key className="w-3 h-3" />
                 Loot Crates
               </div>
@@ -494,12 +494,12 @@ export function BoxPvPStoreClient() {
               return (
                 <div
                   key={key.id}
-                  className="p-6 rounded-3xl glass-card bg-neutral-950/70 border border-white/[0.08] hover:border-cyan-500/40 flex flex-col justify-between gap-4 transition-all duration-300"
+                  className="p-6 rounded-3xl glass-card bg-[#0d0d12] border border-white/[0.08] hover:border-[#c084fc]/40 flex flex-col justify-between gap-4 transition-all duration-300"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       {key.image ? (
-                        <div className="relative w-12 h-12 rounded-2xl overflow-hidden bg-neutral-900 border border-cyan-500/20 shrink-0 shadow-md">
+                        <div className="relative w-12 h-12 rounded-2xl overflow-hidden bg-neutral-900 border border-[#c084fc]/20 shrink-0 shadow-md">
                           <Image
                             src={key.image}
                             alt={key.name}
@@ -510,7 +510,7 @@ export function BoxPvPStoreClient() {
                           />
                         </div>
                       ) : (
-                        <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center">
+                        <div className="w-12 h-12 rounded-2xl bg-[#c084fc]/10 border border-[#c084fc]/20 text-[#c084fc] flex items-center justify-center">
                           <Key className="w-6 h-6" />
                         </div>
                       )}
@@ -523,7 +523,7 @@ export function BoxPvPStoreClient() {
                       </h3>
                     </div>
 
-                    <span className="font-bebas text-2xl tracking-wider text-cyan-400 block mb-2">
+                    <span className="font-bebas text-2xl tracking-wider text-[#c084fc] block mb-2">
                       {formatPrice(key.price)}
                     </span>
 
@@ -534,7 +534,7 @@ export function BoxPvPStoreClient() {
 
                   <button
                     onClick={() => addToCart(key.id)}
-                    className="w-full flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl bg-white/[0.04] hover:bg-cyan-600/20 hover:border-cyan-500/30 border border-white/[0.08] text-neutral-200 hover:text-cyan-300 text-xs font-semibold uppercase tracking-wider transition-all font-sans cursor-pointer"
+                    className="w-full flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl bg-white/[0.04] hover:bg-[#9333ea]/20 hover:border-[#c084fc]/40 border border-white/[0.08] text-neutral-200 hover:text-[#d8b4fe] text-xs font-semibold uppercase tracking-wider transition-all font-sans cursor-pointer"
                   >
                     <Plus className="w-3.5 h-3.5" />
                     <span>{inCart ? "Add More" : "Add to Cart"}</span>

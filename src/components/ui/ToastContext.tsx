@@ -36,9 +36,9 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
         {toasts.map((toast) => (
           <div
             key={toast.id}
-            className="pointer-events-auto flex items-start gap-3 p-4 rounded-xl glass-panel bg-neutral-900/80 border border-purple-500/30 text-neutral-100 shadow-2xl shadow-purple-950/30 animate-in fade-in slide-in-from-bottom-4 duration-300 backdrop-blur-xl"
+            className="pointer-events-auto flex items-start gap-3 p-4 rounded-xl glass-panel bg-[#0d0d12] border border-[#c084fc]/30 text-neutral-100 shadow-2xl shadow-black/80 animate-in fade-in slide-in-from-bottom-4 duration-300 backdrop-blur-xl"
           >
-            <div className="p-1 rounded-lg bg-purple-500/10 text-purple-400 shrink-0 mt-0.5">
+            <div className="p-1 rounded-lg bg-[#c084fc]/10 text-[#c084fc] shrink-0 mt-0.5">
               {toast.icon === "copy" ? (
                 <Copy className="w-4 h-4" />
               ) : toast.icon === "info" ? (

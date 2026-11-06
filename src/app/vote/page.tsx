@@ -40,7 +40,7 @@ export default function VotePage() {
     <div className="py-28 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto mb-16">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-pill bg-purple-500/10 border border-purple-500/20 text-purple-400 mb-4">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-pill bg-[#c084fc]/10 border border-[#c084fc]/25 text-[#c084fc] mb-4">
           <Vote className="w-3.5 h-3.5" />
           <span className="text-[11px] font-semibold uppercase tracking-wider font-sans">
             Support WolfMC
@@ -63,9 +63,9 @@ export default function VotePage() {
           return (
             <div
               key={reward.name}
-              className="p-6 rounded-3xl glass-card bg-white/[0.02] border border-white/[0.06] flex flex-col gap-3"
+              className="p-6 rounded-3xl glass-card bg-[#0d0d12] border border-white/[0.08] flex flex-col gap-3"
             >
-              <div className="p-3 rounded-2xl bg-purple-500/10 text-purple-400 border border-purple-500/20 w-fit">
+              <div className="p-3 rounded-2xl bg-[#c084fc]/10 text-[#c084fc] border border-[#c084fc]/20 w-fit">
                 <Icon className="w-5 h-5" />
               </div>
               <h3 className="font-sans font-bold text-base text-neutral-100">
@@ -92,10 +92,10 @@ export default function VotePage() {
               href={site.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-6 rounded-2xl glass-card bg-white/[0.02] border border-white/[0.06] hover:border-purple-500/40 hover:bg-white/[0.05] flex items-center justify-between transition-all group"
+              className="p-6 rounded-2xl glass-card bg-[#0d0d12] border border-white/[0.08] hover:border-[#c084fc]/40 hover:bg-[#14141c] flex items-center justify-between transition-all group"
             >
               <div>
-                <h4 className="font-sans font-bold text-base text-neutral-100 group-hover:text-purple-300 transition-colors">
+                <h4 className="font-sans font-bold text-base text-neutral-100 group-hover:text-[#c084fc] transition-colors">
                   {site.name}
                 </h4>
                 <p className="text-xs text-neutral-500 font-sans mt-0.5">
@@ -103,7 +103,7 @@ export default function VotePage() {
                 </p>
               </div>
 
-              <div className="flex items-center gap-2 text-xs font-semibold text-purple-400 font-sans">
+              <div className="flex items-center gap-2 text-xs font-semibold text-[#c084fc] group-hover:text-[#d8b4fe] font-sans">
                 <span>Vote</span>
                 <ExternalLink className="w-4 h-4" />
               </div>

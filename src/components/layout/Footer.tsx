@@ -20,10 +20,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="border-t border-white/[0.06] bg-[#050505] relative overflow-hidden">
-      {/* Subtle background glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-40 bg-purple-900/10 blur-[100px] pointer-events-none" />
-
+    <footer className="border-t border-white/[0.08] bg-[#08080a] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-16">
           {/* Brand Column (Span 2) */}
@@ -38,12 +35,12 @@ export function Footer() {
                   className="object-contain"
                 />
               </div>
-              <span className="font-bebas text-3xl tracking-wider text-neutral-100 group-hover:text-purple-400 transition-colors">
+              <span className="font-bebas text-3xl tracking-wider text-neutral-100 group-hover:text-[#c084fc] transition-colors">
                 WOLFMC
               </span>
             </Link>
 
-            <p className="font-playfair italic text-sm text-neutral-400 leading-relaxed">
+            <p className="font-playfair italic text-sm text-[#d8b4fe] leading-relaxed">
               &ldquo;{SERVER_CONFIG.tagline}&rdquo;
             </p>
 
@@ -57,7 +54,7 @@ export function Footer() {
               className={`mt-2 flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border text-xs transition-all duration-300 group cursor-pointer ${
                 copied
                   ? "bg-emerald-500/20 border-emerald-500/50 text-emerald-300 scale-105 shadow-md shadow-emerald-950/30"
-                  : "glass-panel bg-white/[0.02] hover:bg-white/[0.06] border-white/[0.08] text-neutral-300"
+                  : "glass-pill text-neutral-300 hover:border-[#c084fc]/40"
               }`}
             >
               <span
@@ -71,7 +68,7 @@ export function Footer() {
               {copied ? (
                 <Check className="w-3.5 h-3.5 text-emerald-400" />
               ) : (
-                <Copy className="w-3.5 h-3.5 text-neutral-500 group-hover:text-purple-400 transition-colors" />
+                <Copy className="w-3.5 h-3.5 text-neutral-500 group-hover:text-[#c084fc] transition-colors" />
               )}
             </button>
           </div>

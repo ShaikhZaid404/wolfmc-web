@@ -41,9 +41,9 @@ const roleConfigs: Record<
   }
 > = {
   Owner: {
-    badgeClass: "bg-purple-500/15 border-purple-500/30 text-purple-300",
-    iconBg: "bg-purple-500/10",
-    iconColor: "text-purple-400",
+    badgeClass: "bg-[#c084fc]/15 border-[#c084fc]/30 text-[#d8b4fe]",
+    iconBg: "bg-[#c084fc]/10",
+    iconColor: "text-[#c084fc]",
     Icon: Crown,
   },
   Manager: {
@@ -77,7 +77,7 @@ export default function StaffPage() {
     <div className="py-28 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
       {/* Header */}
       <div className="text-center max-w-2xl mx-auto mb-16">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-pill bg-purple-500/10 border border-purple-500/20 text-purple-400 mb-4">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full glass-pill bg-[#c084fc]/10 border border-[#c084fc]/25 text-[#c084fc] mb-4">
           <Users className="w-3.5 h-3.5" />
           <span className="text-[11px] font-semibold uppercase tracking-wider font-sans">
             Network Staff
@@ -102,10 +102,10 @@ export default function StaffPage() {
           return (
             <div
               key={staff.ign}
-              className="p-6 rounded-3xl glass-card bg-white/[0.02] border border-white/[0.06] hover:border-purple-500/30 flex flex-col items-center text-center relative overflow-hidden transition-all"
+              className="p-6 rounded-3xl glass-card bg-[#0d0d12] border border-white/[0.08] hover:border-[#c084fc]/40 flex flex-col items-center text-center relative overflow-hidden transition-all"
             >
               {/* Custom Avatar Frame */}
-              <div className="relative w-24 h-24 rounded-2xl overflow-hidden shrink-0 border border-purple-500/30 group-hover:border-purple-500/60 shadow-xl shadow-purple-950/30 transition-all bg-neutral-900/80 mb-4">
+              <div className="relative w-24 h-24 rounded-2xl overflow-hidden shrink-0 border border-white/[0.08] group-hover:border-[#c084fc]/50 transition-all bg-neutral-900/80 mb-4">
                 <Image
                   src={staff.avatar}
                   alt={`${staff.name} Avatar`}
@@ -147,7 +147,7 @@ export default function StaffPage() {
       </div>
 
       {/* Join Staff CTA */}
-      <div className="p-8 rounded-3xl glass-panel bg-neutral-950/60 border border-white/[0.06] text-center flex flex-col items-center gap-4 max-w-xl mx-auto">
+      <div className="p-8 rounded-3xl glass-panel bg-[#0d0d12] border border-white/[0.08] text-center flex flex-col items-center gap-4 max-w-xl mx-auto">
         <h3 className="font-bebas text-2xl tracking-wider text-neutral-200">
           WANT TO JOIN THE STAFF TEAM?
         </h3>
@@ -158,7 +158,7 @@ export default function StaffPage() {
           href={SERVER_CONFIG.discordUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-xs font-semibold text-white shadow-md shadow-purple-900/30 transition-all font-sans"
+          className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#9333ea] hover:bg-[#8b24e0] text-xs font-semibold text-white border border-[#c084fc]/40 transition-all font-sans"
         >
           <span>Apply on Discord</span>
           <ArrowRight className="w-3.5 h-3.5" />

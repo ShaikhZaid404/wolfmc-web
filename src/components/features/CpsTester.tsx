@@ -48,7 +48,7 @@ export function CpsTester() {
   const cps = isFinished ? (clicks / 5).toFixed(1) : isActive ? (clicks / (5 - timeLeft || 1)).toFixed(1) : "0.0";
 
   const getRank = (score: number) => {
-    if (score >= 13) return { title: "Alpha Pack Leader", desc: "Tournament Grade Reflexes", color: "text-purple-400" };
+    if (score >= 13) return { title: "Alpha Pack Leader", desc: "Tournament Grade Reflexes", color: "text-[#c084fc]" };
     if (score >= 9) return { title: "Pack Warrior", desc: "Ready for Practice & BoxPvP", color: "text-emerald-400" };
     if (score >= 6) return { title: "Beta Wolf", desc: "Solid Combat Foundation", color: "text-cyan-400" };
     return { title: "Wolf Cub", desc: "Warm up your clicking rhythm", color: "text-neutral-400" };
@@ -57,10 +57,10 @@ export function CpsTester() {
   const rank = getRank(parseFloat(cps));
 
   return (
-    <div id="cps-tester" className="w-full max-w-xl mx-auto p-6 sm:p-8 rounded-3xl glass-card bg-neutral-950/60 border border-white/[0.08] relative overflow-hidden">
+    <div id="cps-tester" className="w-full max-w-xl mx-auto p-6 sm:p-8 rounded-3xl glass-card bg-[#0d0d12] border border-white/[0.08] relative overflow-hidden">
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-2.5">
-          <div className="p-2 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20">
+          <div className="p-2 rounded-xl bg-[#c084fc]/10 text-[#c084fc] border border-[#c084fc]/25">
             <Zap className="w-4 h-4" />
           </div>
           <div>
@@ -87,10 +87,10 @@ export function CpsTester() {
         onClick={startTest}
         className={`w-full py-12 px-6 rounded-2xl flex flex-col items-center justify-center cursor-pointer select-none transition-all duration-150 ${
           isFinished
-            ? "bg-purple-950/20 border border-purple-500/40"
+            ? "bg-[#9333ea]/15 border border-[#c084fc]/40"
             : isActive
-            ? "bg-purple-600/15 border border-purple-500/60 scale-[0.99]"
-            : "bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.08] hover:border-purple-500/30"
+            ? "bg-[#9333ea]/20 border border-[#c084fc]/60 scale-[0.99]"
+            : "bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.08] hover:border-[#c084fc]/40"
         }`}
       >
         <p className="text-xs font-semibold uppercase tracking-widest text-neutral-400 mb-2 font-sans">
