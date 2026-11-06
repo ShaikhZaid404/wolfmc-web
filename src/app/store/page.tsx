@@ -121,8 +121,6 @@ export default function StoreHubPage() {
                 <div className="w-10 h-10 rounded-xl bg-[#c084fc]/10 border border-[#c084fc]/20 flex items-center justify-center text-[#c084fc] shrink-0">
                   <Icon className="w-5 h-5" />
                 </div>
-                  <Icon className="w-5 h-5" />
-                </div>
                 <h3 className="font-bebas text-xl tracking-wider text-neutral-100">
                   {feature.title}
                 </h3>
